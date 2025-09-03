@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Fake - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body dir="ltr">
+    <header class="header">
+        <div class="logo">Zero Fake</div>
+        <nav class="navbar">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="training.html" class="nav-link">Training</a>
+            <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+            <a href="profile.html" class="nav-link">Profile</a>
+            <a href="auth.html" class="nav-link">Login/Signup</a>
+        </nav>
+        <div class="theme-switch">
+            <input type="checkbox" id="darkModeToggle" class="theme-checkbox">
+            <label for="darkModeToggle" class="theme-label"></label>
+        </div>
+        <button id="languageToggle" class="btn secondary-btn">English</button>
+    </header>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h1>Zero Fake</h1>
+            <p>Zero Fake helps you detect online frauds and scams through interactive learning and quizzes.</p>
+            <button class="btn primary-btn">Start Learning</button>
+        </div>
+        <div class="hero-animation-placeholder">
+        </div>
+    </main>
+
+    <div class="chatbot-icon" id="chatbotToggle">
+        💬
+    </div>
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <h3>Zero Fake Bot</h3>
+            <span class="close-btn" id="closeChat">&times;</span>
+        </div>
+        <div class="chat-msgs" id="chatMessages">
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Ask me anything...">
+            <button id="sendChatBtn" class="btn">Send</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

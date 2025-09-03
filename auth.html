@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register - Zero Fake</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body dir="ltr">
+    <header class="header">
+        <div class="logo">Zero Fake</div>
+        <nav class="navbar">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="training.html" class="nav-link">Training</a>
+            <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+            <a href="profile.html" class="nav-link">Profile</a>
+            <a href="auth.html" class="nav-link">Login/Signup</a>
+        </nav>
+        <div class="theme-switch">
+            <input type="checkbox" id="darkModeToggle" class="theme-checkbox">
+            <label for="darkModeToggle" class="theme-label"></label>
+        </div>
+        <button id="languageToggle" class="btn secondary-btn">English</button>
+    </header>
+
+    <div class="container auth-container" style="margin-top: 100px;">
+        <h1 id="authTitle">Login</h1>
+        
+        <form id="loginForm" class="auth-form">
+            <input type="email" id="loginEmail" placeholder="Email" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button type="submit" class="btn primary-btn">Login</button>
+        </form>
+
+        <form id="signupForm" class="auth-form" style="display: none;">
+            <input type="text" id="signupUsername" placeholder="Username" required>
+            <input type="email" id="signupEmail" placeholder="Email" required>
+            <input type="password" id="signupPassword" placeholder="Password" required minlength="6">
+            <input type="password" id="signupConfirmPassword" placeholder="Confirm Password" required>
+            <button type="submit" class="btn primary-btn">Sign Up</button>
+        </form>
+
+        <div class="auth-footer">
+            <p id="toggleAuthText"><span>Don't have an account?</span> <span id="toggleAuthBtn" class="link-btn">Sign Up</span></p>
+            <button id="guestBtn" class="btn secondary-btn">Continue as Guest</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+<div class="chatbot-icon" id="chatbotToggle">
+    💬
+</div>
+<div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+        <h3 data-key="bot_name">Zero Fake Bot</h3>
+        <span class="close-btn" id="closeChat">&times;</span>
+    </div>
+    <div class="chat-msgs" id="chatMessages">
+    </div>
+    <div class="chat-input">
+        <input type="text" id="chatInput" placeholder="Ask me anything...">
+        <button id="sendChatBtn" class="btn">Send</button>
+    </div>
+</div>

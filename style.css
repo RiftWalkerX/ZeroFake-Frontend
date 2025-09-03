@@ -1,0 +1,1031 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: ltr;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    line-height: 1.6;
+}
+
+body.dark-mode {
+    --bg-color-light: #212121;
+    --text-color-light: #e0e0e0;
+    --primary-color: #03a9f4;
+    --secondary-color: #4dd0e1;
+    --card-bg-color: #303030;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --border-color: #424242;
+    --secondary-color-light-hover: #424242;
+}
+
+body {
+    --bg-color-light: #f5f5f5;
+    --text-color-light: #424242;
+    --primary-color: #1976d2;
+    --secondary-color: #42a5f5;
+    --card-bg-color: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --border-color: #e0e0e0;
+    --secondary-color-light-hover: #e0f2f7;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--card-bg-color);
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.navbar .nav-link {
+    color: var(--text-color-light);
+    text-decoration: none;
+    padding: 10px 18px;
+    margin: 0 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1.1em;
+}
+
+.navbar .nav-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.theme-switch {
+    position: relative;
+    width: 60px;
+    height: 34px;
+    margin-right: 15px;
+}
+
+.theme-checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.theme-label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.theme-label:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    right: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.theme-checkbox:checked + .theme-label {
+    background-color: var(--primary-color);
+}
+
+.theme-checkbox:checked + .theme-label:before {
+    transform: translateX(26px);
+}
+
+#languageToggle {
+    padding: 8px 15px;
+    font-size: 0.9em;
+    margin-left: 15px;
+}
+
+.hero {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 30px;
+    text-align: center;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.hero-content {
+    max-width: 800px;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    font-size: 1.4em;
+    line-height: 1.7;
+    color: var(--text-color-light);
+    margin-bottom: 40px;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    margin: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+}
+
+.primary-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.secondary-btn {
+    background-color: #6c757d;
+}
+
+.secondary-btn:hover {
+    background-color: #5a6268;
+}
+
+.chatbot-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2em;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.chatbot-icon:hover {
+    transform: scale(1.1);
+}
+
+.chat-window {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    left: 30px;
+    width: 380px;
+    height: 500px;
+    background-color: var(--card-bg-color);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px var(--shadow-color);
+    z-index: 1000;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 1.3em;
+}
+
+.chat-msgs {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--bg-color-light);
+}
+
+.chat-input {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--card-bg-color);
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    margin-right: 10px;
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    font-size: 1em;
+}
+
+.chat-input .btn {
+    padding: 10px 18px;
+    font-size: 1em;
+}
+
+.msg-bubble {
+    max-width: 80%;
+    padding: 12px 18px;
+    border-radius: 18px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    font-size: 0.95em;
+}
+
+.msg-bubble.user {
+    background-color: var(--primary-color);
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 18px;
+}
+
+.msg-bubble.bot {
+    background-color: #e0e0e0;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 18px;
+}
+
+body.dark-mode .msg-bubble.bot {
+    background-color: #555;
+    color: #f0f0f0;
+}
+
+.typing-indicator span {
+    display: inline-block;
+    background-color: #ccc;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 0 2px;
+    animation: bounce 0.6s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+.typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+    0%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-8px); }
+}
+
+.container {
+    background-color: var(--card-bg-color);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+h1 {
+    color: var(--text-color-light);
+    margin-bottom: 35px;
+    font-size: 2.5em;
+}
+
+.auth-container {
+    max-width: 500px;
+    padding: 50px;
+}
+
+.auth-form input {
+    width: calc(100% - 24px);
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    text-align: left;
+    font-size: 1.05em;
+}
+
+.auth-form input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.auth-footer {
+    margin-top: 30px;
+    font-size: 1.05em;
+}
+
+.auth-footer p {
+    margin-bottom: 15px;
+}
+
+.link-btn {
+    color: var(--primary-color);
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.link-btn:hover {
+    color: var(--secondary-color);
+}
+
+.training-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 60px;
+}
+
+.training-container .main-title {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    direction: ltr;
+    text-align: left;
+}
+
+.training-container .introduction-text {
+    font-size: 1.3em;
+    line-height: 1.8;
+    color: var(--text-color-light);
+    margin-bottom: 50px;
+    max-width: 900px;
+    text-align: left;
+    direction: ltr;
+}
+
+.levels-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.level-card {
+    background-color: var(--card-bg-color);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px var(--shadow-color);
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    border: 1px solid var(--border-color);
+}
+
+.level-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px var(--shadow-color);
+}
+
+.level-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.6em;
+}
+
+.level-card p {
+    color: var(--text-color-light);
+    font-size: 1.05em;
+    margin-bottom: 20px;
+}
+
+.level-card .start-quiz-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin-top: 15px;
+}
+
+.level-card.locked {
+    opacity: 0.4;
+    cursor: not-allowed;
+    filter: grayscale(90%);
+}
+
+.level-card .checkmark {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #28a745;
+    font-size: 2em;
+    display: none;
+}
+
+.level-card.completed .checkmark {
+    display: block;
+}
+
+.lesson-content-section,
+.quiz-content-section {
+    background-color: var(--card-bg-color);
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px var(--shadow-color);
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 60px;
+    text-align: left;
+    color: var(--text-color-light);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.lesson-content-section h2,
+.quiz-content-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-size: 2.2em;
+}
+
+.slide-content {
+    min-height: 250px;
+    margin-bottom: 35px;
+    font-size: 1.2em;
+    line-height: 1.9;
+}
+
+.slide-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.slide-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 45px;
+}
+
+.quiz-question {
+    font-size: 1.8em;
+    margin-bottom: 35px;
+}
+
+.quiz-options label {
+    display: block;
+    background-color: var(--bg-color-light);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+    text-align: right;
+    font-size: 1.1em;
+}
+
+.quiz-options label:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--primary-color);
+    color: white;
+    transform: translateX(-8px);
+}
+
+.quiz-options input[type="radio"] {
+    margin-right: 0;
+    margin-left: 18px;
+    transform: scale(1.2);
+}
+
+.quiz-options label.selected {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.feedback-modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.feedback-content {
+    background-color: var(--card-bg-color);
+    margin: auto;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    color: var(--text-color-light);
+    animation: slideInUp 0.4s ease-out;
+}
+
+.feedback-content h3 {
+    margin-bottom: 25px;
+    font-size: 2.2em;
+}
+
+.feedback-content p {
+    margin-bottom: 35px;
+    font-size: 1.3em;
+    color: var(--text-color-light);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(80px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.leaderboard-container {
+    margin-top: 100px;
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 60px;
+}
+
+#leaderboardTable {
+    width: 100%;
+    margin: 35px auto;
+    border-collapse: collapse;
+    background-color: var(--card-bg-color);
+    box-shadow: 0 5px 15px var(--shadow-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#leaderboardTable th,
+#leaderboardTable td {
+    padding: 18px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+    font-size: 1.05em;
+}
+
+#leaderboardTable th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#leaderboardTable tbody tr:nth-child(even) {
+    background-color: var(--bg-color-light);
+}
+
+#leaderboardTable tbody tr:hover {
+    background-color: var(--secondary-color-light-hover);
+}
+
+body.dark-mode #leaderboardTable tbody tr:hover {
+    background-color: #424242;
+}
+
+.profile-container {
+    margin-top: 100px;
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 60px;
+}
+
+.user-info {
+    margin-top: 35px;
+    padding: 40px;
+    background-color: var(--card-bg-color);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    width: 100%;
+    max-width: 750px;
+    margin: 35px auto;
+    text-align: left;
+}
+
+.user-info p {
+    font-size: 1.15em;
+    margin-bottom: 15px;
+}
+
+.user-info span {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.badges-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 45px;
+}
+
+.badge {
+    background-color: var(--card-bg-color);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    width: 200px;
+    text-align: left;
+    border: 1px solid var(--border-color);
+}
+
+.badge h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.badge p {
+    font-size: 1.05em;
+    color: var(--text-color-light);
+}
+
+@media (max-width: 1024px) {
+    .container, .training-container, .leaderboard-container, .profile-container {
+        width: 95%;
+        max-width: 90%;
+    }
+
+    .levels-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 15px;
+        align-items: center;
+    }
+
+    .navbar {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-link {
+        margin: 5px;
+        padding: 8px 12px;
+        font-size: 1em;
+    }
+
+    .theme-switch, #languageToggle {
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        align-self: center;
+    }
+
+    #languageToggle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-content h1 {
+        font-size: 3em;
+    }
+
+    .hero-content p {
+        font-size: 1.1em;
+    }
+
+    .btn {
+        padding: 10px 22px;
+        font-size: 1em;
+}
+
+.auth-container {
+    padding: 30px;
+        max-width: 90%;
+    }
+
+    .auth-form input {
+        padding: 12px;
+        font-size: 1em;
+    }
+
+    .training-container .main-title {
+        font-size: 2.5em;
+    }
+
+    .training-container .introduction-text {
+        font-size: 1.1em;
+    }
+
+    .levels-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 15px;
+    }
+
+    .level-card {
+        padding: 20px;
+    }
+
+    .level-card h3 {
+        font-size: 1.4em;
+    }
+
+    .lesson-content-section,
+    .quiz-content-section {
+        padding: 30px;
+        max-width: 95%;
+    }
+
+    .slide-content {
+        min-height: 200px;
+        font-size: 1.1em;
+    }
+
+    .quiz-question {
+        font-size: 1.5em;
+    }
+
+    .quiz-options label {
+    padding: 15px;
+        font-size: 1em;
+    }
+
+    .quiz-options input[type="radio"] {
+        transform: scale(1.1);
+        margin-right: 12px;
+    }
+
+    .feedback-content {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    .feedback-content h3 {
+        font-size: 2em;
+    }
+
+    .feedback-content p {
+        font-size: 1.1em;
+    }
+
+    .chatbot-icon,
+    .chat-window {
+        bottom: 20px;
+        right: 20px;
+        width: 320px;
+        height: 420px;
+    }
+
+    .chat-window .chat-input input {
+        font-size: 0.9em;
+    }
+
+    .chat-window .btn {
+        font-size: 0.9em;
+    }
+
+    #leaderboardTable th,
+    #leaderboardTable td {
+        padding: 12px;
+        font-size: 0.95em;
+    }
+
+    .user-info {
+        padding: 30px;
+    }
+
+    .user-info p {
+        font-size: 1.05em;
+    }
+
+    .badge {
+        width: 160px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+    padding: 10px;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.6em;
+    }
+
+    .navbar .nav-link {
+        padding: 5px 10px;
+        margin: 3px;
+        font-size: 0.9em;
+    }
+
+    .theme-switch, #languageToggle {
+        margin-top: 10px;
+        align-self: center;
+    }
+
+    #languageToggle {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+
+    .hero-content p {
+    font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        padding: 8px 18px;
+        font-size: 0.9em;
+    }
+
+    .auth-container {
+        padding: 20px;
+    }
+
+    .auth-form input {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .auth-footer {
+        font-size: 0.9em;
+    }
+
+    .training-container .main-title {
+        font-size: 2em;
+    }
+
+    .training-container .introduction-text {
+        font-size: 0.9em;
+    }
+
+    .levels-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .level-card {
+        padding: 18px;
+    }
+
+    .level-card h3 {
+        font-size: 1.3em;
+    }
+
+    .level-card p {
+        font-size: 0.95em;
+    }
+
+    .lesson-content-section,
+    .quiz-content-section {
+        padding: 20px;
+    }
+
+    .slide-content {
+        min-height: 150px;
+        font-size: 1em;
+    }
+
+    .quiz-question {
+        font-size: 1.3em;
+    }
+
+    .quiz-options label {
+        padding: 12px;
+        font-size: 0.9em;
+    }
+
+    .quiz-options input[type="radio"] {
+        transform: scale(1);
+        margin-right: 10px;
+    }
+
+    .feedback-content {
+        padding: 20px;
+    }
+
+    .feedback-content h3 {
+        font-size: 1.8em;
+    }
+
+    .feedback-content p {
+        font-size: 1em;
+    }
+
+    .chatbot-icon,
+    .chat-window {
+        bottom: 15px;
+        right: 15px;
+        width: 280px;
+        height: 380px;
+    }
+
+    #leaderboardTable th,
+    #leaderboardTable td {
+        padding: 10px;
+        font-size: 0.85em;
+    }
+
+    .user-info {
+        padding: 20px;
+    }
+
+    .user-info p {
+        font-size: 0.95em;
+    }
+
+    .badge {
+        width: 140px;
+        padding: 15px;
+    }
+}

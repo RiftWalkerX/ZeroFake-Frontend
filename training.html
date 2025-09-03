@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic Fraud Detection Training</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body dir="ltr">
+    <header class="header">
+        <div class="logo">Zero Fake</div>
+        <nav class="navbar">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="training.html" class="nav-link">Training</a>
+            <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+            <a href="profile.html" class="nav-link">Profile</a>
+            <a href="auth.html" class="nav-link">Login/Signup</a>
+        </nav>
+        <div class="theme-switch">
+            <input type="checkbox" id="darkModeToggle" class="theme-checkbox">
+            <label for="darkModeToggle" class="theme-label"></label>
+        </div>
+        <button id="languageToggle" class="btn secondary-btn">English</button>
+    </header>
+
+    <main class="container training-container" style="margin-top: 100px;">
+        <h1 class="main-title">🛡️ Electronic Fraud Detection Training</h1>
+        <p class="introduction-text">
+            On this page, you will learn how to distinguish between real messages and phishing messages with simple steps.
+            You will participate in practical exercises ranging from easy to difficult.
+        </p>
+
+        <section id="levelsContainer" class="levels-grid">
+        </section>
+
+        <section id="lessonContent" class="lesson-content-section" style="display: none;">
+            <h2 id="lessonTitle"></h2>
+            <div id="slideContent" class="slide-content">
+            </div>
+            <div class="slide-nav">
+                <button id="prevSlideBtn" class="btn secondary-btn">Previous</button>
+                <button id="nextSlideBtn" class="btn primary-btn">Next</button>
+            </div>
+        </section>
+
+        <section id="quizContent" class="quiz-content-section" style="display: none;">
+            <h2 class="quiz-question" id="quizQuestion"></h2>
+            <div id="quizOptions" class="quiz-options">
+            </div>
+            <button id="submitQuizBtn" class="btn primary-btn">Submit Answer</button>
+        </section>
+
+        <div id="feedbackModal" class="feedback-modal">
+            <div class="feedback-content">
+                <h3 id="feedbackTitle"></h3>
+                <p id="feedbackExplanation"></p>
+                <button id="nextBtn" class="btn primary-btn">Continue</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+<div class="chatbot-icon" id="chatbotToggle">
+    💬
+</div>
+<div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+        <h3 data-key="bot_name">Zero Fake Bot</h3>
+        <span class="close-btn" id="closeChat">&times;</span>
+    </div>
+    <div class="chat-msgs" id="chatMessages">
+    </div>
+    <div class="chat-input">
+        <input type="text" id="chatInput" placeholder="Ask me anything...">
+        <button id="sendChatBtn" class="btn">Send</button>
+    </div>
+</div>
+
