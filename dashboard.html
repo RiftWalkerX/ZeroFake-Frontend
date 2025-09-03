@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Zero Fake</div>
+        <nav class="navbar">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="training.html" class="nav-link">Training</a>
+            <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+            <a href="profile.html" class="nav-link">Profile</a>
+            <a href="auth.html" class="nav-link">Login/Signup</a>
+            <a href="#" id="logoutBtn" class="nav-link">Logout</a>
+        </nav>
+        <div class="theme-switch">
+            <input type="checkbox" id="darkModeToggle" class="theme-checkbox">
+            <label for="darkModeToggle" class="theme-label"></label>
+        </div>
+    </header>
+
+    <div class="container dashboard-container" style="margin-top: 100px;">
+        <h1>Dashboard</h1>
+        <p>Welcome, User!</p>
+        <div class="progress-section">
+            <h2>Your Progress</h2>
+            <p>Quizzes Played: <span id="quizzesPlayed">0</span></p>
+            <p>Times Corrected: <span id="timesCorrected">0</span></p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

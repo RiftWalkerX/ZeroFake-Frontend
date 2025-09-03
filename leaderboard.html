@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Zero Fake</div>
+        <nav class="navbar">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="training.html" class="nav-link">Training</a>
+            <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+            <a href="profile.html" class="nav-link">Profile</a>
+            <a href="auth.html" class="nav-link">Login/Signup</a>
+            <a href="#" id="logoutBtn" class="nav-link">Logout</a>
+        </nav>
+        <div class="theme-switch">
+            <input type="checkbox" id="darkModeToggle" class="theme-checkbox">
+            <label for="darkModeToggle" class="theme-label"></label>
+        </div>
+    </header>
+
+    <div class="container leaderboard-container" style="margin-top: 100px;">
+        <h1>Leaderboard</h1>
+        <table id="leaderboardTable">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Player</th>
+                    <th>Score</th>
+                    <th>Correct Answers</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

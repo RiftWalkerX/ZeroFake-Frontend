@@ -1,0 +1,116 @@
+{
+    "beginner": [
+        {
+            "id": 1,
+            "title": "Introduction to Scams",
+            "slides": [
+                {
+                    "type": "text",
+                    "content": "Welcome to Zero Fake! In this lesson, you will learn the basics of identifying online scams and phishing attempts."
+                },
+                {
+                    "type": "image",
+                    "src": "https://via.placeholder.com/400x200?text=Phishing+Example",
+                    "alt": "Phishing example image",
+                    "caption": "Phishing emails often look legitimate but contain suspicious links."
+                },
+                {
+                    "type": "text",
+                    "content": "Scammers often use urgent language, threats, or enticing offers to trick you."
+                }
+            ],
+            "quiz": {
+                "question": "What is a common tactic used by scammers?",
+                "options": [
+                    "Using official company logos",
+                    "Offering legitimate discounts",
+                    "Creating a sense of urgency or fear",
+                    "Providing detailed contact information"
+                ],
+                "correctAnswerIndex": 2,
+                "explanation": "Scammers often use urgent language or threats to panic you into acting without thinking."
+            }
+        },
+        {
+            "id": 2,
+            "title": "Email Scams",
+            "slides": [
+                {
+                    "type": "text",
+                    "content": "Email phishing is one of the most common types of online fraud. Always check the sender's email address carefully."
+                },
+                {
+                    "type": "text",
+                    "content": "Look for grammatical errors, generic greetings, and suspicious links in emails."
+                }
+            ],
+            "quiz": {
+                "question": "Which of these is a red flag in an email?",
+                "options": [
+                    "Personalized greeting",
+                    "Official company signature",
+                    "Typos and grammatical errors",
+                    "Sender's email matching company domain"
+                ],
+                "correctAnswerIndex": 2,
+                "explanation": "Legitimate organizations typically have professional communications without typos."
+            }
+        }
+    ],
+    "intermediate": [
+        {
+            "id": 3,
+            "title": "Website Impersonation",
+            "slides": [
+                {
+                    "type": "text",
+                    "content": "Fake websites often mimic legitimate ones to steal your login credentials. Always check the URL for misspellings or unusual domains."
+                },
+                {
+                    "type": "image",
+                    "src": "https://via.placeholder.com/400x200?text=Fake+Website+Example",
+                    "alt": "Fake website example",
+                    "caption": "A fake login page might look identical to the real one, but the URL will be different."
+                }
+            ],
+            "quiz": {
+                "question": "How can you identify a fake website?",
+                "options": [
+                    "It has a professional design",
+                    "The URL is slightly misspelled or has an unusual domain",
+                    "It uses HTTPS (secure connection)",
+                    "It loads quickly"
+                ],
+                "correctAnswerIndex": 1,
+                "explanation": "Even with a secure connection, a slightly altered URL is a strong indicator of a fake website."
+            }
+        }
+    ],
+    "advanced": [
+        {
+            "id": 4,
+            "title": "Social Engineering",
+            "slides": [
+                {
+                    "type": "text",
+                    "content": "Social engineering relies on psychological manipulation to trick users into divulging confidential information."
+                },
+                {
+                    "type": "text",
+                    "content": "Be cautious of unexpected calls, messages, or requests from unknown individuals pretending to be from support or authorities."
+                }
+            ],
+            "quiz": {
+                "question": "What is the primary goal of social engineering?",
+                "options": [
+                    "To improve network security",
+                    "To provide legitimate customer support",
+                    "To manipulate individuals into performing actions or divulging confidential information",
+                    "To update software systems"
+                ],
+                "correctAnswerIndex": 2,
+                "explanation": "Social engineering is about tricking people, not technology, to gain access to sensitive data."
+            }
+        }
+    ]
+}
