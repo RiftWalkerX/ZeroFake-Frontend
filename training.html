@@ -3,70 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Training - Zero Fake</title>
+    <title>Electronic Fraud Detection Training</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body dir="rtl">
     <header class="header">
-        <div class="logo">Zero Fake</div>
-        <nav class="navbar">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="training.html" class="nav-link">Training</a>
-            <a href="leaderboard.html" class="nav-link">Leaderboard</a>
-            <a href="profile.html" class="nav-link">Profile</a>
-            <a href="auth.html" class="nav-link">Login/Signup</a>
-        </nav>
-        <div class="theme-switch">
-            <input type="checkbox" id="darkModeToggle" class="theme-checkbox">
-            <label for="darkModeToggle" class="theme-label"></label>
+        <div id="profileIconAndToggleContainer" style="display: flex; align-items: center;">
+            <div class="profile-icon" id="profileIcon">
+                <a href="profile.html">👤</a>
+            </div>
+            <div class="theme-switch">
+                <input type="checkbox" id="themeToggle" class="theme-checkbox">
+                <label for="themeToggle" class="theme-label"></label>
+            </div>
         </div>
+        <nav class="navbar">
+            <a href="index.html" class="nav-link">الرئيسية</a>
+            <a href="training.html" class="nav-link">التدريب</a>
+            <a href="leaderboard.html" class="nav-link">لوحة الصدارة</a>
+            <a href="cyber_challenge.html" class="nav-link">تحدي الأمن السيبراني</a>
+            <a href="auth.html" class="nav-link">تسجيل الدخول</a>
+        </nav>
+        <div class="logo">Zero Fake</div>
     </header>
 
-    <div class="container training-container">
-        <h1>Training</h1>
-        <div class="level-select">
-            <h2>Select Level:</h2>
-            <button class="btn level-btn" data-level="beginner">Beginner</button>
-            <button class="btn level-btn" data-level="intermediate">Intermediate</button>
-            <button class="btn level-btn" data-level="advanced">Advanced</button>
+    <main class="container training-container" style="margin-top: 100px;">
+        <h1 class="main-title">🛡️ تدريب على كشف الاحتيال الإلكتروني</h1>
+        <p class="introduction-text">
+            في هذه الصفحة، ستتعلم كيفية التمييز بين الرسائل الحقيقية ورسائل التصيد الاحتيالي بخطوات بسيطة. ستشارك في تمارين عملية تتراوح من السهل إلى الصعب.
+        </p>
+
+        <div class="progress-bar-container">
+            <div class="progress-bar-fill" id="progressBarFill"></div>
         </div>
 
-        <div id="lessonsList" class="lesson-list">
-        </div>
+        <section id="levelsContainer" class="levels-grid">
+        </section>
 
-        <div id="lessonContent" class="lesson-content" style="display: none;">
+        <section id="lessonContent" class="lesson-content-section" style="display: none;">
             <h2 id="lessonTitle"></h2>
             <div id="slideContent" class="slide-content">
             </div>
             <div class="slide-nav">
-                <button id="prevSlideBtn" class="btn" style="display: none;">Previous</button>
-                <button id="nextSlideBtn" class="btn">Next</button>
+                <button id="prevSlideBtn" class="btn secondary-btn">Previous</button>
+                <button id="nextSlideBtn" class="btn primary-btn">Next</button>
             </div>
+        </section>
 
-            <div id="quizContent" class="quiz-content" style="display: none;">
-                <h3 id="quizQuestion"></h3>
-                <div id="quizOptions" class="quiz-options">
-                </div>
-                <button id="submitQuizBtn" class="btn primary-btn">Submit Answer</button>
+        <section id="quizContent" class="quiz-content-section" style="display: none;">
+            <h2 class="quiz-question" id="quizQuestion"></h2>
+            <div id="quizOptions" class="quiz-options">
             </div>
-        </div>
+            <button id="submitQuizBtn" class="btn primary-btn" style="display: none;"></button>
+        </section>
 
-        <div id="feedbackModal" class="modal">
-            <div class="modal-content">
-                <span class="close-btn">&times;</span>
-                <h2 id="feedbackTitle"></h2>
+        <div id="feedbackModal" class="feedback-modal">
+            <div class="feedback-content">
+                <h3 id="feedbackTitle"></h3>
                 <p id="feedbackExplanation"></p>
-                <button id="nextBtn" class="btn">Continue</button>
+                <button id="nextBtn" class="btn primary-btn">Continue</button>
             </div>
         </div>
-    </div>
+    </main>
 
+    <script src="app.js"></script>
     <div class="chatbot-icon" id="chatbotToggle">
         💬
     </div>
     <div class="chat-window" id="chatWindow">
         <div class="chat-header">
-            <h3>Zero Fake Bot</h3>
+            <h3 data-key="bot_name">Zero Fake Bot</h3>
             <span class="close-btn" id="closeChat">&times;</span>
         </div>
         <div class="chat-msgs" id="chatMessages">
@@ -76,8 +82,6 @@
             <button id="sendChatBtn" class="btn">Send</button>
         </div>
     </div>
-
-    <script src="app.js"></script>
 </body>
 </html>
 

@@ -1,116 +1,982 @@
 {
-    "beginner": [
+  "lessons": [
+    {
+      "level": 1,
+      "اسم_الدرس": "الروابط المزيفه",
+      "محتوى_الدرس": [
+        "1. افحص الدومين (Domain):",
+        "الموقع الرسمي بيكون له دومين معروف زي:",
+        "bankofegypt.com ✅",
+        "مش زي bankofegypt-secure-login.com ❌",
+        "خد بالك من الحروف المتغيرة (زي استخدام رقم 0 بدل O).",
+        "2. تأكد من بروتوكول الأمان (HTTPS):",
+        "المواقع السليمة لازم تبدأ بـ https:// ومعاها علامة القفل 🔒.",
+        "بس خد بالك: وجود القفل مش ضمان كامل، لكنه إشارة جيدة.",
+        "3. اقرأ الرابط كامل قبل الضغط:",
+        "بعض الروابط تبدأ صح لكن آخرها فيه إضافة مشبوهة:",
+        "https://www.facebook.com/login ✅",
+        "https://www.facebook.com.login.verify-user.xyz ❌",
+        "4. ابحث عن أخطاء إملائية أو غريبة:",
+        "المواقع المزيفة غالبًا فيها أخطاء في الكتابة أو شكل الدومين.",
+        "5. ما تفتحش الروابط من الرسائل المشبوهة:",
+        "سواء SMS أو إيميل بيقولك \"اضغط هنا بسرعة لتجديد الاشتراك\" أو \"فزت بجائزة\".",
+        "6. استخدم أدوات فحص الروابط:",
+        "زي Google Safe Browsing أو VirusTotal علشان تلصق اللينك وتعرف إذا آمن أو لا.",
+        "7. خد بالك من الاختصارات:",
+        "لو الرابط قصير زي bit.ly/... افحصه في موقع لفك الاختصارات (زي CheckShortURL.com)."
+      ],
+      "الكويز": [
         {
-            "id": 1,
-            "title": "Introduction to Scams",
-            "slides": [
-                {
-                    "type": "text",
-                    "content": "Welcome to Zero Fake! In this lesson, you will learn the basics of identifying online scams and phishing attempts."
-                },
-                {
-                    "type": "image",
-                    "src": "https://via.placeholder.com/400x200?text=Phishing+Example",
-                    "alt": "Phishing example image",
-                    "caption": "Phishing emails often look legitimate but contain suspicious links."
-                },
-                {
-                    "type": "text",
-                    "content": "Scammers often use urgent language, threats, or enticing offers to trick you."
-                }
-            ],
-            "quiz": {
-                "question": "What is a common tactic used by scammers?",
-                "options": [
-                    "Using official company logos",
-                    "Offering legitimate discounts",
-                    "Creating a sense of urgency or fear",
-                    "Providing detailed contact information"
-                ],
-                "correctAnswerIndex": 2,
-                "explanation": "Scammers often use urgent language or threats to panic you into acting without thinking."
-            }
+          "السؤال": "📩 رسالة SMS:\n\"عزيزي العميل، لتأكيد بياناتك برجاء تسجيل الدخول الآن:\n🔗 https://www.cibegypt.com/login\"",
+          "الإجابة": "Safe",
+          "explanation": "This is a legitimate-looking link from a common bank domain. While SMS can be spoofed, the content itself doesn't contain immediate red flags that are universally present in phishing attempts. Always verify by directly visiting the bank's website or app."
         },
         {
-            "id": 2,
-            "title": "Email Scams",
-            "slides": [
-                {
-                    "type": "text",
-                    "content": "Email phishing is one of the most common types of online fraud. Always check the sender's email address carefully."
-                },
-                {
-                    "type": "text",
-                    "content": "Look for grammatical errors, generic greetings, and suspicious links in emails."
-                }
-            ],
-            "quiz": {
-                "question": "Which of these is a red flag in an email?",
-                "options": [
-                    "Personalized greeting",
-                    "Official company signature",
-                    "Typos and grammatical errors",
-                    "Sender's email matching company domain"
-                ],
-                "correctAnswerIndex": 2,
-                "explanation": "Legitimate organizations typically have professional communications without typos."
-            }
-        }
-    ],
-    "intermediate": [
+          "السؤال": "📩 رسالة إيميل:\n\"تم إيقاف حسابك في فيسبوك مؤقتًا، يرجى التحقق فورًا عبر الرابط:\n🔗 https://facebook.com.secure-login-update.co\"",
+          "الإجابة": "Phishing",
+          "explanation": "The domain 'facebook.com.secure-login-update.co' is suspicious. It tries to mimic 'facebook.com' but has additional, unrelated parts, which is a classic phishing tactic. The urgency of 'تحقق فورًا' (verify immediately) is also a red flag."
+        },
         {
-            "id": 3,
-            "title": "Website Impersonation",
-            "slides": [
-                {
-                    "type": "text",
-                    "content": "Fake websites often mimic legitimate ones to steal your login credentials. Always check the URL for misspellings or unusual domains."
-                },
-                {
-                    "type": "image",
-                    "src": "https://via.placeholder.com/400x200?text=Fake+Website+Example",
-                    "alt": "Fake website example",
-                    "caption": "A fake login page might look identical to the real one, but the URL will be different."
-                }
-            ],
-            "quiz": {
-                "question": "How can you identify a fake website?",
-                "options": [
-                    "It has a professional design",
-                    "The URL is slightly misspelled or has an unusual domain",
-                    "It uses HTTPS (secure connection)",
-                    "It loads quickly"
-                ],
-                "correctAnswerIndex": 1,
-                "explanation": "Even with a secure connection, a slightly altered URL is a strong indicator of a fake website."
-            }
-        }
-    ],
-    "advanced": [
+          "السؤال": "📩 رسالة SMS:\n\"فزت بجائزة 10,000 جنيه من فودافون! لاستلام جائزتك اضغط هنا:\n🔗 https://vodafone.com.eg/prize\"",
+          "الإجابة": "Phishing",
+          "explanation": "This SMS promises a large, unexpected prize, a common phishing lure. While the domain 'vodafone.com.eg/prize' looks legitimate, unexpected prizes via SMS should always be verified directly with the company through official channels."
+        },
         {
-            "id": 4,
-            "title": "Social Engineering",
-            "slides": [
-                {
-                    "type": "text",
-                    "content": "Social engineering relies on psychological manipulation to trick users into divulging confidential information."
-                },
-                {
-                    "type": "text",
-                    "content": "Be cautious of unexpected calls, messages, or requests from unknown individuals pretending to be from support or authorities."
-                }
-            ],
-            "quiz": {
-                "question": "What is the primary goal of social engineering?",
-                "options": [
-                    "To improve network security",
-                    "To provide legitimate customer support",
-                    "To manipulate individuals into performing actions or divulging confidential information",
-                    "To update software systems"
-                ],
-                "correctAnswerIndex": 2,
-                "explanation": "Social engineering is about tricking people, not technology, to gain access to sensitive data."
-            }
+          "السؤال": "📩 رسالة إيميل:\n\"تم شراء منتج جديد من أمازون بحسابك. إذا لم تكن أنت، ألغِ الطلب عبر:\n🔗 https://www.amazon.com/gp/css/order-history\"",
+          "الإجابة": "Safe",
+          "explanation": "This email from Amazon informs about a new purchase and provides a link to 'amazon.com/gp/css/order-history'. The link is to the official Amazon domain and a relevant page. This is a common and legitimate transactional email, but users should still always consider directly logging into their account to verify."
+        },
+        {
+          "السؤال": "📩 رسالة SMS:\n\"ادفع فاتورة الكهرباء فورًا لتجنب قطع الخدمة:\n🔗 http://egypt-electricity-payment.com\"",
+          "الإجابة": "Phishing",
+          "explanation": "The domain 'egypt-electricity-payment.com' is generic and not an official government or electricity company domain. The use of 'http://' instead of 'https://' indicates a lack of security, and the urgent tone 'فورًا لتجنب قطع الخدمة' (immediately to avoid service interruption) is a common phishing tactic."
         }
-    ]
+      ]
+    },
+    {
+      "level": 2,
+      "اسم_الدرس": "الإيميلات المشبوهة",
+      "محتوى_الدرس": [
+        "1. تحقق من عنوان المرسل (Email Address):",
+        "o الإيميلات الرسمية بتكون من دومين معروف زي:",
+        "support@facebook.com ✅",
+        "مش زي: support.facebook@secure-mail.co ❌",
+        "2. افحص عنوان الموضوع (Subject):",
+        "o رسائل التصيد غالبًا تستعجل: \"عاجل! حسابك سيتوقف!\"",
+        "3. وجود روابط مشبوهة داخل الرسالة:",
+        "o حتى لو الرابط ظاهر آمن، ممكن يكون النص مختلف عن الرابط الفعلي (Hidden Links).",
+        "4. وجود مرفقات غير متوقعة:",
+        "o ملف Word أو PDF من جهة غير معروفة ممكن يحتوي على فيروس.",
+        "5. الأخطاء الإملائية أو اللغوية:",
+        "o الشركات الكبيرة نادرًا تغلط في الإملاء.",
+        "6. نبرة الرسالة:",
+        "o دايمًا فيها استعجال أو تهديد: \"سدّد فورًا\" أو \"سيتم إيقاف الحساب\".",
+        "7. تأكد من صحة الرسالة:",
+        "o تواصل مع الشركة مباشرة من موقعها الرسمي بدل الضغط على الرابط."
+      ],
+      "الكويز": [
+        {
+          "السؤال": "📩 إيميل من: support@paypal.com\nالموضوع: \"تأكيد الأمان\"\nالمحتوى: \"برجاء تحديث كلمة السر من خلال الرابط:\n🔗 https://www.paypal.com/security-update\"",
+          "الإجابة": "Safe",
+          "explanation": "The email is from the official PayPal domain (support@paypal.com) and the link directs to a legitimate PayPal security update page (paypal.com/security-update). This appears to be a genuine security notification. Always verify by logging into your account directly."
+        },
+        {
+          "السؤال": "📩 إيميل من: support.paypal@secure-mail.co\nالموضوع: \"حسابك مهدد بالإيقاف\"\n🔗 https://paypal.secure-update.co",
+          "الإجابة": "Phishing",
+          "explanation": "The sender's email address 'support.paypal@secure-mail.co' is not the official PayPal domain. The link 'paypal.secure-update.co' is also a fake domain designed to look like PayPal's. The urgent subject 'حسابك مهدد بالإيقاف' (Your account is threatened with suspension) is a common phishing tactic."
+        },
+        {
+          "السؤال": "📩 إيميل من: noreply@facebook.com\nالموضوع: \"تم تسجيل دخول جديد من جهاز غير معروف\"\n🔗 https://www.facebook.com/checkpoint",
+          "الإجابة": "Safe",
+          "explanation": "The email is from the official Facebook domain (noreply@facebook.com) and the link directs to a legitimate Facebook checkpoint page (facebook.com/checkpoint). This is a standard security alert. Always verify directly through the official app or website."
+        },
+        {
+          "السؤال": "📩 إيميل من: amazon-security@amz-support.net\nالموضوع: \"طلب جديد على حسابك\"\n🔗 https://amz-support.net/login",
+          "الإجابة": "Phishing",
+          "explanation": "The sender's email address 'amazon-security@amz-support.net' is not the official Amazon domain. The link 'amz-support.net/login' is also a fake domain. This is a common phishing attempt to make you think there's unauthorized activity on your account."
+        },
+        {
+          "السؤال": "📩 إيميل من: info@vodafone.com.eg\nالموضوع: \"فاتورتك الشهرية متاحة الآن\"\n🔗 https://vodafone.com.eg/bill",
+          "الإجابة": "Safe",
+          "explanation": "The email is from the official Vodafone Egypt domain (info@vodafone.com.eg) and the link directs to a legitimate Vodafone bill page (vodafone.com.eg/bill). This is a genuine billing notification. Always verify through the official app or website if unsure."
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "اسم_الدرس": "الرسائل النصية (SMS) الخادعة",
+      "محتوى_الدرس": [
+        "1. الأرقام الغريبة أو الدولية:",
+        "o الرسائل الرسمية بتيجي من أرقام قصيرة أو أسماء شركات (مثال: Vodafone).",
+        "o لو جايلك من رقم دولي عشوائي → إحتيال.",
+        "2. الرسائل اللي فيها استعجال:",
+        "o \"سدّد فورًا\" أو \"سيتم إيقاف الخدمة خلال ساعات\".",
+        "3. جوائز وهمية:",
+        "o \"فزت بجائزة\"، \"اربح آيفون\"، \"رصيد مجاني\" → إشارات تصيد.",
+        "4. روابط غير رسمية:",
+        "o أي لينك مش تابع للدومين الرسمي للشركة غالبًا مزيف.",
+        "5. الأخطاء الإملائية أو اللغوية:",
+        "o الشركات الكبيرة نادرًا تغلط في الإملاء أو اللغة.",
+        "6. اطلب التحقق من المصدر:",
+        "o لو جاتلك رسالة من \"البنك\" → كلم البنك مباشرة على رقم خدمة العملاء."
+      ],
+      "الكويز": [
+        {
+          "السؤال": "📩 SMS من رقم مجهول:\n\"عزيزي العميل، رصيدك انتهى! لشحن 50 جنيه واحصل على 50 هدية:\n🔗 http://bonus-voda.com\"",
+          "الإجابة": "Phishing",
+          "explanation": "This SMS is from an unknown number and offers an unrealistic bonus ('احصل على 50 هدية'). The link 'bonus-voda.com' is a fake domain, not the official Vodafone website. This is a typical phishing attempt using an enticing offer."
+        },
+        {
+          "السؤال": "📩 SMS من Vodafone:\n\"فاتورتك متاحة الآن على التطبيق. قم بالسداد عبر MyVodafone App.\"",
+          "الإجابة": "Safe",
+          "explanation": "This SMS is from 'Vodafone' and instructs you to use the official MyVodafone App, which is a secure method. There's no suspicious link or urgent threat. This is a legitimate notification."
+        },
+        {
+          "السؤال": "📩 SMS من رقم دولي:\n\"لقد ربحت سيارة BMW جديدة! لاستلام جائزتك اضغط:\n🔗 https://bmw-prize-eg.com\"",
+          "الإجابة": "Phishing",
+          "explanation": "This SMS is from an international number, announces an unexpected and high-value prize (BMW car), and provides a suspicious link 'bmw-prize-eg.com'. Companies usually do not announce such prizes via random international SMS with unverified links. This is a phishing scam."
+        },
+        {
+          "السؤال": "📩 SMS من CIB:\n\"يرجى تحديث بياناتك فورًا عبر الرابط:\n🔗 https://www.cibegypt-secure-update.com\"",
+          "الإجابة": "Phishing",
+          "explanation": "The domain 'cibegypt-secure-update.com' is a fake domain designed to look like CIB's official website. Banks typically do not ask for urgent data updates via SMS links. The 'فورًا' (immediately) creates a sense of urgency, which is a common phishing tactic."
+        },
+        {
+          "السؤال": "📩 SMS من Orange:\n\"اشترك الآن في باقة الإنترنت الجديدة عبر #222#\"",
+          "الإجابة": "Safe",
+          "explanation": "This SMS from 'Orange' asks you to subscribe to a new internet package using a USSD code (#222#), which is a legitimate and secure method for telecommunication services. There is no suspicious link or threat."
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "اسم_الدرس": "المكالمات الهاتفية الاحتيالية",
+      "محتوى_الدرس": [
+        "1. انتحال شخصية موظف رسمي:",
+        "o المتصل يدّعي إنه من البنك/شركة الاتصالات/الحكومة.",
+        "2. طلب بيانات شخصية أو مالية:",
+        "o البنك الحقيقي عمره ما هيطلب منك كلمة السر أو كود OTP في مكالمة.",
+        "3. استخدام الخوف أو الاستعجال:",
+        "o \"حسابك هيتقفل خلال ساعة\"، \"رصيدك هيتسحب لو ما عملتش كذا\".",
+        "4. المكالمات من أرقام مجهولة أو دولية:",
+        "o لو الرقم مش معروف للشركة اللي بيتكلم باسمها → غالبًا نصب.",
+        "5. استخدام عروض مغرية أو هدايا:",
+        "o \"كسبت جايزة\"، \"هنرجعلك فلوس\"، \"رصيد مجاني\".",
+        "6. الطريقة الصحيحة للتصرف:",
+        "o اقفل المكالمة واتصل بخدمة العملاء على الرقم الرسمي للشركة."
+      ],
+      "الكويز": [
+        {
+          "السؤال": "📞 مكالمة: \"مساء الخير، أنا من البنك الأهلي. محتاج منك دلوقتي تبعتلي الكود اللي وصلك عشان أفعّل حسابك.\"",
+          "الإجابة": "Phishing",
+          "explanation": "A legitimate bank will never ask for your OTP (One-Time Password) over the phone. Sharing your OTP gives fraudsters access to your account. This is a vishing (voice phishing) attempt."
+        },
+        {
+          "السؤال": "📞 مكالمة من رقم رسمي معروف: \"أستاذ أحمد، طلبت خدمة الإنترنت الجديدة. حابب نفعّلها لك دلوقتي؟\"",
+          "الإجابة": "Safe",
+          "explanation": "This call is from a known official number and relates to a service you requested. The caller is offering to activate it, which is a normal customer service interaction. Always be sure to confirm the number is genuinely official."
+        },
+        {
+          "السؤال": "📞 مكالمة من رقم دولي: \"مبروك يا فندم، حضرتك كسبت 100,000 دولار! ابعت بياناتك نستلم الجائزة.\"",
+          "الإجابة": "Phishing",
+          "explanation": "This call is from an international number, announces an unexpected large prize, and asks for personal data to 'receive' it. This is a classic scam tactic. Legitimate companies do not award prizes this way."
+        },
+        {
+          "السؤال": "📞 مكالمة: \"أنا من فودافون، محتاج رقم البطاقة القومي بتاعك وتاريخ الميلاد عشان نحدّث بياناتك.\"",
+          "الإجابة": "Phishing",
+          "explanation": "While companies may need to update your information, they usually do not ask for sensitive details like your National ID number and date of birth over an unsolicited call. It's safer to call the official customer service number to verify."
+        },
+        {
+          "السؤال": "📞 مكالمة من رقم خدمة العملاء الرسمي لفودافون: \"سيادتك قدّمت شكوى بخصوص الفاتورة، حابب نساعدك فيها دلوقتي؟\"",
+          "الإجابة": "Safe",
+          "explanation": "This call is from the official Vodafone customer service number and refers to a complaint you made. This is a legitimate follow-up. Ensure the number is genuinely official."
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "اسم_الدرس": "التطبيقات المزيفة",
+      "محتوى_الدرس": [
+        "1. المصدر الرسمي للتطبيق:",
+        "o نزّل التطبيقات فقط من App Store (iOS) أو Google Play (Android).",
+        "o لو من روابط خارجية أو مواقع مشبوهة → خطر.",
+        "2. اسم المطوّر (Developer):",
+        "o التطبيقات الرسمية بيكون وراها شركة معروفة.",
+        "o مثلًا: \"WhatsApp LLC\" ✅ مش \"WhatsApp Free Chat Ltd\" ❌.",
+        "3. عدد التحميلات:",
+        "o التطبيقات الشهيرة بيكون عندها ملايين التحميلات.",
+        "4. التقييمات والمراجعات:",
+        "o خد بالك من التعليقات الغريبة أو المكررة → علامة نصب.",
+        "5. أذونات التطبيق (Permissions):",
+        "o لو تطبيق آلة حاسبة طالب إذن للمايك أو الكاميرا → خطر.",
+        "6. الأيقونة والتصميم:",
+        "o التطبيقات المزيفة أحيانًا يكون شكلها مشابه لكن فيه اختلاف بسيط في الألوان أو الاسم."
+      ],
+      "الكويز": [
+        {
+          "السؤال": "📱 تطبيق \"Facebook\" على متجر Google Play:\n• المطوّر: \"Meta Platforms, Inc.\"\n• عدد التحميلات: 5 مليار.",
+          "الإجابة": "Safe",
+          "explanation": "This is the official Facebook app, developed by Meta Platforms, Inc., with a massive number of downloads, indicating its legitimacy on a trusted app store."
+        },
+        {
+          "السؤال": "📱 تطبيق \"WhatsApp Messenger Free\"\n• المطوّر: \"WhatsApp Free Chat Ltd\"\n• التحميلات: 10,000 فقط.",
+          "الإجابة": "Phishing",
+          "explanation": "The developer 'WhatsApp Free Chat Ltd' is suspicious and not the official WhatsApp LLC. The low number of downloads for such a popular app also indicates it's fake. This is likely a malicious imposter app."
+        },
+        {
+          "السؤال": "📱 تطبيق \"MyVodafone Egypt\" على App Store:\n• المطوّر: \"Vodafone Egypt Telecommunications\".",
+          "الإجابة": "Safe",
+          "explanation": "This is the official MyVodafone Egypt app, developed by 'Vodafone Egypt Telecommunications', a legitimate developer on a trusted app store."
+        },
+        {
+          "السؤال": "📱 تطبيق آلة حاسبة (Calculator)\n• يطلب إذن الوصول للكاميرا والمايكروفون وجهات الاتصال.",
+          "الإجابة": "Phishing",
+          "explanation": "A calculator app has no legitimate reason to request access to your camera, microphone, or contacts. This is a significant red flag that the app is malicious and trying to collect sensitive data."
+        },
+        {
+          "السؤال": "📱 تطبيق \"Instagram\"\n• المطوّر: \"Meta Platforms, Inc.\"\n• التقييمات: 4.5/5 مع 1 مليار تحميل.",
+          "الإجابة": "Safe",
+          "explanation": "This is the official Instagram app, developed by Meta Platforms, Inc., with high ratings and a massive number of downloads, confirming its legitimacy on a trusted app store."
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "اسم_الدرس": "تحقق من الهوية (Sender ID Spoofing)",
+      "محتوى_الدرس": [
+        "1. إيه هو الـ Sender ID Spoofing؟",
+        "o هي خدعة بيخلي فيها المحتال الرسالة أو المكالمة يبان إنها جاية من مصدر رسمي (زي البنك أو شركة الاتصالات).",
+        "2. الرسالة ممكن يبان إنها من Vodafone أو CIB:",
+        "o لكن في الحقيقة جاية من رقم عادي أو سيرفر خارجي.",
+        "3. الخطورة:",
+        "o بيستغل ثقتك في الاسم الظاهر عشان يخليك تفتح الرابط أو ترد بمعلومات.",
+        "4. طريقة التحقق:",
+        "o متعتمدش بس على اسم المرسل الظاهر.",
+        "o افحص الرابط نفسه أو اتصل بالشركة من الرقم الرسمي.",
+        "5. علامات التحذير:",
+        "o استعجال/تهديد (\"سدّد فورًا\"، \"حسابك هيتوقف\").",
+        "o روابط غريبة أو مختصرة.",
+        "o طلب بيانات شخصية أو بنكية.",
+        "6. النصيحة الذهبية:",
+        "o دايمًا روح للمصدر الرسمي بنفسك (موقع البنك، تطبيق الشركة)."
+      ],
+      "الكويز": [
+        {
+          "السؤال": "📩 SMS ظاهر إنه من \"CIB Bank\":\n\"يرجى تحديث بياناتك عبر:\n🔗 https://cibegypt-update.com\"",
+          "الإجابة": "Phishing",
+          "explanation": "Despite appearing to be from 'CIB Bank', the link 'cibegypt-update.com' is not the official CIB domain. This is a spoofing attempt designed to trick you into entering your details on a fake website."
+        },
+        {
+          "السؤال": "📩 SMS ظاهر إنه من \"Vodafone\":\n\"اشحن رصيدك الآن من خلال تطبيق MyVodafone.\"",
+          "الإجابة": "Safe",
+          "explanation": "This message, appearing to be from 'Vodafone', directs you to use the official MyVodafone application, a secure method. There's no suspicious link or unusual request."
+        },
+        {
+          "السؤال": "📞 مكالمة يظهر اسمها \"National Bank of Egypt\":\n\"أستاذ محمد، محتاج الكود اللي وصلك دلوقتي عشان نأمّن حسابك.\"",
+          "الإجابة": "Phishing",
+          "explanation": "Even if the caller ID shows 'National Bank of Egypt', a bank will never ask for a verification code (OTP) over the phone. This is a vishing attack to gain access to your account."
+        },
+        {
+          "السؤال": "📩 SMS من \"Etisalat Misr\":\n\"رصيدك المتبقي 20 جنيه. اشحن الآن عبر الكود *555#.\"",
+          "الإجابة": "Safe",
+          "explanation": "This message from 'Etisalat Misr' provides a USSD code (*555#) for recharging, which is a legitimate and secure method for telecommunication services. No suspicious links or requests are present."
+        },
+        {
+          "السؤال": "📩 SMS يظهر إنه من \"Amazon\":\n\"تم إيقاف حسابك، سجل دخولك فورًا عبر:\n🔗 http://amazon-secure-login.net\"",
+          "الإجابة": "Phishing",
+          "explanation": "Despite appearing to be from 'Amazon', the link 'amazon-secure-login.net' is not the official Amazon domain and uses 'http' instead of 'https', indicating it's not secure. The urgent tone ('سجل دخولك فورًا') is also a red flag. This is a phishing attempt."
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "اسم_الدرس": "الروابط المختصرة (Short Links)",
+      "محتوى_الدرس": [
+        "1. إيه هي الروابط المختصرة؟",
+        "o مواقع زي bit.ly أو tinyurl بتقصّر الرابط الطويل لرابط قصير.",
+        "2. فين الخطورة؟",
+        "o الرابط القصير يخفي العنوان الحقيقي، وممكن يوصلك لموقع تصيّد.",
+        "3. المحتال بيستغلها:",
+        "o يبعتلك SMS أو إيميل فيه رابط مختصر تقول \"شكله آمن\"، لكن هو بيوجهك لموقع نصب.",
+        "4. إزاي تتحقق؟",
+        "o استخدم مواقع لفك الروابط المختصرة (زي: CheckShortURL.com).",
+        "o أو مرّر الماوس على الرابط (Hover) عشان تشوف العنوان الكامل قبل الضغط.",
+        "5. النصيحة الذهبية:",
+        "o متضغطش على أي رابط مختصر من مصدر غير موثوق."
+      ],
+      "الكويز": [
+        {
+          "السؤال": "📩 SMS: \"اشحن رصيدك الآن واحصل على 100 جنيه هدية:\n🔗 https://bit.ly/3x7abc\"",
+          "الإجابة": "Phishing",
+          "explanation": "This SMS offers an unrealistic gift and uses a shortened URL (bit.ly). Shortened URLs can hide malicious destinations, and combined with an enticing offer from an unknown source, it's a strong indicator of phishing."
+        },
+        {
+          "السؤال": "📩 إيميل من تويتر:\n\"أعد ضبط كلمة السر من خلال الرابط الرسمي:\n🔗 https://twitter.com/account/begin_reset\"",
+          "الإجابة": "Safe",
+          "explanation": "This email is from Twitter and provides a link to the official Twitter password reset page (twitter.com/account/begin_reset). This is a legitimate security process, but always double-check the sender's email address and the URL for any discrepancies."
+        },
+        {
+          "السؤال": "📩 SMS: \"مبروك! فزت بجائزة من اتصالات:\n🔗 http://tinyurl.com/etisalat-prize\"",
+          "الإجابة": "Phishing",
+          "explanation": "This SMS announces an unexpected prize and uses a shortened URL (tinyurl.com). The combination of a tempting prize and a disguised link from an unverified source is a classic phishing tactic."
+        },
+        {
+          "السؤال": "📩 إيميل من Google:\n\"نشاط غير معتاد على حسابك. تحقّق من تسجيل الدخول:\n🔗 https://accounts.google.com/signin\"",
+          "الإجابة": "Safe",
+          "explanation": "This email from Google is a security alert with a link to the official Google sign-in page (accounts.google.com/signin) to review unusual activity. This is a legitimate security notification. Always verify by directly logging into your Google account."
+        },
+        {
+          "السؤال": "📩 رسالة واتساب: \"جرب تطبيق جديد لمشاهدة المباريات مجانًا:\n🔗 https://bit.ly/free-matches-app\"",
+          "الإجابة": "Phishing",
+          "explanation": "This WhatsApp message encourages you to download a new app for free matches using a shortened URL. Unsolicited links, especially shortened ones promising free content, are often used to distribute malware or lead to phishing sites."
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "اسم_الدرس": "الملفات المرفقة الخطيرة",
+      "محتوى_الدرس": [
+        "1. إيه المقصود بالملفات المرفقة الخطيرة؟",
+        "o هي ملفات (Word, Excel, PDF, ZIP …) بيبعتها المحتال في إيميل أو رسالة.",
+        "2. الملفات ممكن تحتوي:",
+        "o فيروسات أو برامج تجسس.",
+        "o أكواد خبيثة تتشغّل أول ما تفتح الملف.",
+        "3. علامات الخطر في المرفقات:",
+        "o جايالك من مرسل مش معروف.",
+        "o الرسالة تقول \"افتح الملف بسرعة\" أو \"مهم جدًا\".",
+        "o الملف بصيغة غريبة زي .exe أو .scr.",
+        "4. الأمان في المرفقات:",
+        "o افتح الملفات فقط لو جاية من مصدر رسمي ومتأكد منه.",
+        "o استخدم برنامج مضاد فيروسات لفحص الملف قبل فتحه.",
+        "5. نصيحة ذهبية:",
+        "o لو مش متأكد → ما تفتحش."
+      ],
+      "الكويز": [
+        {
+          "السؤال": "📩 إيميل من: hr@company.com\n\"مرفق ملف الـ CV الخاص بالمتقدم الجديد للوظيفة.\"\n📎 Attachment: cv.docx",
+          "الإجابة": "Safe",
+          "explanation": "This email from a legitimate HR department with a common document type (docx) for a CV is typically safe, especially if you are expecting recruitment related emails. However, always exercise caution and scan attachments from unexpected senders."
+        },
+        {
+          "السؤال": "📩 إيميل من: security@bankofegypt.com\n\"لأسباب أمنية، افتح الملف المرفق لمعرفة تفاصيل حسابك.\"\n📎 Attachment: account-details.xlsm",
+          "الإجابة": "Phishing",
+          "explanation": "A bank will not ask you to open an attachment to view account details for 'security reasons'. The file extension '.xlsm' can indicate a macro-enabled Excel file, which is often used to deliver malware. This is a phishing attempt."
+        },
+        {
+          "السؤال": "📩 إيميل من: friend@gmail.com\n\"دي صور الرحلة اللي وعدتك بيها.\"\n📎 Attachment: photos.zip",
+          "الإجابة": "Phishing",
+          "explanation": "Even if from a known friend, an unexpected ZIP file containing 'photos' could be malicious. ZIP files are often used to bypass email security and deliver malware. Always verify with the sender through an alternative communication channel if you were not expecting such an attachment."
+        },
+        {
+          "السؤال": "📩 إيميل رسمي من: billing@vodafone.com.eg\n\"مرفق فاتورتك الشهرية.\"\n📎 Attachment: Vodafone_Bill.pdf",
+          "الإجابة": "Safe",
+          "explanation": "This email from the official Vodafone billing department and contains a PDF bill, which is a common and legitimate practice. This is safe, but always ensure the sender's email is genuinely from the company."
+        },
+        {
+          "السؤال": "📩 إيميل من: unknown@randommail.com\n\"عندك إشعار مهم جدًا، افتح الملف بسرعة!\"\n📎 Attachment: urgent.exe",
+          "الإجابة": "Phishing",
+          "explanation": "This email is from an unknown sender, creates urgency, and contains an executable file (.exe). Executable files in email attachments are highly suspicious and almost always indicate malware. This is a very clear phishing attempt."
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "اسم_الدرس": "المواقع المزيفة لخدمات الدفع",
+      "محتوى_الدرس": [
+        "1. إيه هي المواقع المزيفة للدفع؟",
+        "o مواقع شبيهة بـ PayPal، Vodafone Cash، أو بوابات الدفع الإلكتروني.",
+        "o هدفها سرقة بيانات الكارت أو الحساب البنكي.",
+        "2. علامات الموقع المزيف:",
+        "o الدومين فيه إضافات غريبة:",
+        "\tpaypal-secure-login.com ❌",
+        "\tvodafonecash-eg-payment.net ❌",
+        "o مش بيبدأ بـ https:// أو القفل مش موجود.",
+        "3. التصميم:",
+        "o بيشبه الموقع الأصلي لكن في أخطاء لغوية أو تصميمية.",
+        "4. طرق الإرسال:",
+        "o توصلك رسالة SMS أو إيميل فيه رابط \"سدّد هنا\".",
+        "5. الطريقة الصحيحة للدفع:",
+        "o استخدم التطبيق الرسمي أو الموقع الرسمي فقط.",
+        "o اكتب العنوان بنفسك في المتصفح بدل الضغط على الرابط.",
+        "6. نصيحة ذهبية:",
+        "o عمرك ما تدخل بيانات بطاقتك في رابط جالك من SMS أو إيميل."
+      ],
+      "الكويز": [
+        {
+          "السؤال": "📩 SMS: \"ادفع فاتورتك الشهرية الآن عبر الرابط:\n🔗 https://vodafone.com.eg/bill\"",
+          "الإجابة": "Safe",
+          "explanation": "This SMS provides a link to the official Vodafone Egypt billing page (vodafone.com.eg/bill) using HTTPS. This appears to be a legitimate billing notification, but it's always safest to navigate to the official website directly."
+        },
+        {
+          "السؤال": "📩 إيميل من: billing@paypal.com\n\"لإتمام الدفع، استخدم الرابط التالي:\n🔗 https://paypal.com/myaccount\"",
+          "الإجابة": "Safe",
+          "explanation": "This email is from the official PayPal billing address and directs to a legitimate PayPal account page (paypal.com/myaccount). This is a standard notification. Always verify the sender's email and the URL directly."
+        },
+        {
+          "السؤال": "📩 SMS: \"اشحن رصيدك الآن عبر:\n🔗 http://vodafone-eg-payment.net\"",
+          "الإجابة": "Phishing",
+          "explanation": "The link 'vodafone-eg-payment.net' is not the official Vodafone Egypt domain, and it uses 'http' instead of 'https'. This is a clear indicator of a fake payment website designed to steal your credentials."
+        },
+        {
+          "السؤال": "📩 إيميل: \"تم تعليق حسابك، ادفع فورًا عبر الرابط:\n🔗 https://paypal-secure-login.co\"",
+          "الإجابة": "Phishing",
+          "explanation": "The link 'paypal-secure-login.co' is a fake domain trying to mimic PayPal. The email uses a threatening tone ('تم تعليق حسابك', account suspended) and urges immediate action, which are common phishing tactics."
+        },
+        {
+          "السؤال": "📩 SMS من CIB:\n\"تقدر تدفع بطاقة الائتمان الخاصة بيك من خلال تطبيق CIB Mobile Banking.\"",
+          "الإجابة": "Safe",
+          "explanation": "This SMS from CIB advises you to use the official CIB Mobile Banking app for payment, which is a secure and legitimate method. There are no suspicious links or urgent requests for personal information."
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "اسم_الدرس": "الهندسة الاجتماعية (Social Engineering)",
+      "محتوى_الدرس": [
+        "1. إيه هي الهندسة الاجتماعية؟",
+        "o هي فن الخداع اللي بيستغل الثقة البشرية بدل ما يهاجم التكنولوجيا.",
+        "o المحتال يحاول يقنعك تدي له معلومة أو تعمل إجراء يخدمه.",
+        "2. طرق شائعة للهندسة الاجتماعية:",
+        "o Pretexting (اختلاق قصة): يتظاهر إنه موظف رسمي.",
+        "o Urgency (الاستعجال): يخوفك أو يضغط عليك تتصرف بسرعة.",
+        "o Authority (السلطة): يدّعي إنه مدير أو مسؤول حكومي.",
+        "o Scarcity (الندرة): \"العرض سينتهي بعد دقائق!\".",
+        "3. أمثلة عملية:",
+        "o اتصال يدّعي إنه من البنك ويطلب OTP.",
+        "o رسالة \"فزت بجائزة\" عشان تخليك تضغط على رابط.",
+        "o موظف وهمي يطلب نسخة من بطاقتك لتحديث بياناتك.",
+        "4. إزاي تحمي نفسك:",
+        "o متشاركش أي معلومة شخصية مع شخص ما تعرفوش.",
+        "o تحقق من هوية المتصل/الراسل عن طريق الاتصال بالمصدر الرسمي.",
+        "o خليك هادي وما تستعجلش في القرارات."
+      ],
+      "الكويز": [
+        {
+          "السؤال": "📞 مكالمة: \"أنا من شركة الكهرباء. محتاج رقم بطاقتك لتحديث بياناتك فورًا وإلا هتتوقف الخدمة.\"",
+          "الإجابة": "Phishing",
+          "explanation": "This call creates a sense of urgency and threat ('وإلا هتتوقف الخدمة') and asks for sensitive personal information (National ID). Utility companies generally do not demand such information immediately over an unsolicited call. This is a social engineering tactic."
+        },
+        {
+          "السؤال": "📩 SMS: \"مبروك! آخر فرصة لاستلام جائزتك. اضغط هنا:\n🔗 http://prize-eg.com\"",
+          "الإجابة": "Phishing",
+          "explanation": "This SMS uses an enticing offer ('مبروك!'), creates urgency ('آخر فرصة'), and directs to a suspicious link ('prize-eg.com'). These are classic social engineering elements designed to exploit curiosity and fear of missing out."
+        },
+        {
+          "السؤال": "📩 إيميل من \"HR@company.com\":\n\"إحنا بنوظّف حاليًا، من فضلك ابعت نسخة من بطاقتك القومية وبياناتك البنكية عشان نكمل الإجراءات.\"",
+          "الإجابة": "Phishing",
+          "explanation": "A legitimate HR department would not ask for sensitive documents like National ID and bank details via an unsolicited email, especially for job application procedures. This is a pretexting scam using the guise of a job offer to collect personal information."
+        },
+        {
+          "السؤال": "📞 مكالمة: \"أنا مدير خدمة العملاء في البنك، ابعتلي الكود اللي وصلك عشان أوقف التحويل.\"",
+          "الإجابة": "Phishing",
+          "explanation": "No legitimate bank manager will ask for your OTP (One-Time Password) to stop a transfer. This is a high-pressure social engineering tactic to trick you into revealing a critical security code."
+        },
+        {
+          "السؤال": "📩 إيميل رسمي من Google:\n\"نشاط غير معتاد على حسابك. لتأمينه، أدخل على حسابك عبر:\n🔗 https://accounts.google.com\"",
+          "الإإجابة": "Safe",
+          "explanation": "This email from Google is a legitimate security alert, directing you to the official Google accounts page (accounts.google.com). It provides a secure way to review and secure your account. Always verify the domain before clicking."
+        }
+      ]
+    },
+    {
+      "level": 11,
+      "اسم_الدرس": "الهدايا والمسابقات الوهمية",
+      "محتوى_الدرس": [
+        "1. إيه هي الهدايا الوهمية؟",
+        "o رسائل أو إعلانات بتقولك \"فزت بجائزة\"، \"اربح آيفون\"، \"رصيد مجاني\".",
+        "o الهدف: يخلوك تضغط على رابط أو تدي بياناتك.",
+        "2. إزاي المحتالين بيغروك؟",
+        "o يستخدموا أسماء شركات كبيرة (Vodafone, Amazon, Facebook).",
+        "o يضغطوا عليك بالوقت: \"سجّل قبل انتهاء العرض\".",
+        "3. علامات الخطر:",
+        "o الجوائز مبالغ فيها أو غير منطقية.",
+        "o طلب رسوم بسيطة أو بيانات بطاقة لاستلام الجائزة.",
+        "o روابط مش تابعة للموقع الرسمي.",
+        "4. الحقيقة:",
+        "o الشركات الكبيرة تعلن عن المسابقات عبر قنواتها الرسمية فقط (موقع رسمي، صفحة موثقة).",
+        "5. النصيحة الذهبية:",
+        "o لو العرض شكله مغري زيادة عن اللزوم → غالبًا نصب."
+      ],
+      "الكويز": [
+        {
+          "السؤال": "📩 SMS: \"مبروك! كسبت 10,000 جنيه من Vodafone. استلم جائزتك عبر:\n🔗 http://vodafone-prize.com\"",
+          "الإجابة": "Phishing",
+          "explanation": "This SMS offers an unrealistic prize and directs to a non-official Vodafone domain ('vodafone-prize.com') using HTTP. This is a classic fake giveaway scam designed to steal personal information or credentials."
+        },
+        {
+          "السؤال": "📩 إعلان على فيسبوك: \"اربح iPhone 15 مجانًا! فقط اضغط واشترك.\"\n🔗 http://free-iphone-eg.net",
+          "الإجابة": "Phishing",
+          "explanation": "This Facebook ad promises an unrealistic free iPhone and links to a suspicious, non-official domain ('free-iphone-eg.net') using HTTP. Such 'too good to be true' offers are almost always scams."
+        },
+        {
+          "السؤال": "📩 إيميل رسمي من Amazon:\n\"اشترك في المسابقة الشهرية عبر صفحتنا الرسمية:\n🔗 https://www.amazon.com/contest\"",
+          "الإإجابة": "Safe",
+          "explanation": "This email is from the official Amazon domain and directs to a legitimate contest page (amazon.com/contest). If the email sender is verified as Amazon, this would be a safe interaction. Always verify directly."
+        },
+        {
+          "السؤال": "📩 SMS: \"مبروك يا عميل! لتحصل على رصيد مجاني 200 جنيه، ابعت بيانات بطاقتك.\"",
+          "الإجابة": "Phishing",
+          "explanation": "This SMS offers free credit but then asks for sensitive credit card details. Legitimate companies will never ask for your full card details via SMS for such offers. This is an attempt to steal financial information."
+        },
+        {
+          "السؤال": "📩 إعلان من صفحة فيسبوك موثقة عليها العلامة الزرقاء:\n\"شارك البوست واعمل لايك عشان تدخل السحب على كوبون خصم 200 جنيه.\"",
+          "الإجابة": "Safe",
+          "explanation": "This is a legitimate promotion from a verified Facebook page. Engaging with official and verified social media accounts for contests is generally safe, as long as they don't ask for sensitive personal data outside their platform."
+        }
+      ]
+    },
+    {
+      "level": 12,
+      "اسم_الدرس": "الإعلانات المضللة على الإنترنت",
+      "محتوى_الدرس": [
+        "1. إيه هي الإعلانات المضللة؟",
+        "o إعلانات بتظهر على المواقع أو السوشيال ميديا وتقولك \"جهازك مصاب بفيروس\"، \"اكسب آلاف الدولارات\"، \"استثمر واربح بسرعة\".",
+        "o الهدف: يخلوك تضغط وتدخل موقع نصب.",
+        "2. الأساليب المستخدمة:",
+        "o صور جذابة أو صادمة.",
+        "o عناوين مثيرة زي: \"لن تصدق ما حدث بعد أن جرب هذا!\"",
+        "o وعود غير منطقية (ربح سريع، علاج معجزة, زيادة الطول في أسبوع).",
+        "3. علامات الخطر:",
+        "o روابط غير واضحة أو غريبة.",
+        "o استخدام أسماء شركات كبيرة بشكل مزيف.",
+        "o طلب تحميل ملف أو إدخال بيانات شخصية/مالية.",
+        "4. إزاي تحمي نفسك؟",
+        "o ما تضغطش على إعلان شكله مشبوه.",
+        "o اعتمد على المصادر الرسمية للمنتجات والخدمات.",
+        "o استخدم برامج حجب الإعلانات (Ad Blocker).",
+        "5. النصيحة الذهبية:",
+        "o لو الإعلان شكله مبالغ فيه أو بيخوفك → تجاهله فورًا."
+      ],
+      "الكويز": [
+        {
+          "السؤال": "📩 إعلان بيقول: \"جهازك مصاب بـ 13 فيروس! حمّل التطبيق الآن للحماية مجانًا.\"\n🔗 http://virus-cleaner-now.net",
+          "الإجابة": "Phishing",
+          "explanation": "This ad uses fear tactics ('جهازك مصاب بـ 13 فيروس!') and urges you to download an app from a suspicious, non-secure domain ('virus-cleaner-now.net'). This is a scareware tactic combined with a fake download link, often leading to malware."
+        },
+        {
+          "السؤال": "📩 إعلان على يوتيوب من قناة رسمية لشركة Microsoft بيشرح منتج جديد.",
+          "الإجابة": "Safe",
+          "explanation": "An advertisement on YouTube from an official, verified channel (e.g., indicated by a checkmark) of a reputable company like Microsoft, explaining a new product, is generally legitimate and safe."
+        },
+        {
+          "السؤال": "📩 إعلان في موقع: \"اكسب 5000 دولار في أسبوع واحد! اضغط هنا واشترك.\"\n🔗 http://fast-money-eg.com",
+          "الإجابة": "Phishing",
+          "explanation": "This ad promises unrealistic quick money ('اكسب 5000 دولار في أسبوع واحد!') and directs to a suspicious, non-secure domain ('fast-money-eg.com'). These 'get rich quick' schemes are almost always fraudulent."
+        },
+        {
+          "السؤال": "📩 إعلان على فيسبوك: \"عرض رسمي من Nike – خصم 50% على الموقع الرسمي:\n🔗 https://www.nike.com/eg\"",
+          "الإجابة": "Safe",
+          "explanation": "This Facebook ad promotes an official offer from Nike and links to the legitimate, secure Nike Egypt website. Advertisements from official sources for genuine promotions are generally safe."
+        },
+        {
+          "السؤال": "📩 إعلان: \"اكتشف السر الذي سيغير حياتك! اضغط الآن.\"\n🔗 http://life-secret-now.co",
+          "الإجابة": "Phishing",
+          "explanation": "This ad uses vague, sensational language ('اكتشف السر الذي سيغير حياتك!') to lure clicks and directs to a suspicious, non-secure domain ('life-secret-now.co'). This is a clickbait tactic designed to lead you to scams or unwanted content."
+        }
+      ]
+    },
+    {
+      "level": 13,
+      "اسم_الدرس": "انتحال شخصية الشركات (Business Impersonation)",
+      "محتوى_الدرس": [
+        "1. إيه هو؟",
+        "o رسالة بريد إلكتروني أو SMS تدّعي إنها من شركة كبيرة (Microsoft, Google, DHL, Vodafone) عشان تكسب ثقتك.",
+        "o ممكن يطلبوا \"تأكيد بياناتك\"، \"تحديث النظام\"، أو \"موعد مقابلة عمل\".",
+        "2. التكتيك:",
+        "o استخدام شعار الشركة وألوانها.",
+        "o عنوان بريد إلكتروني مشابه جدًا للأصلي (مثال: support@micr0soft.com).",
+        "o لغة رسمية جدًا لإقناعك.",
+        "3. علامات الخطر:",
+        "o الإيميل جاي من دومين (Domain) مش رسمي.",
+        "o روابط مشبوهة أو مختلفة عن الموقع الأصلي.",
+        "o طلبات غير معتادة (كلمة مرور، بطاقة ائتمان، تحميل ملف).",
+        "4. إزاي تحمي نفسك؟",
+        "o تحقق من البريد المرسل (Email address) كويس.",
+        "o لو وصلك عرض توظيف أو تحديث من الشركة، راجع الموقع الرسمي أو اتصل بالدعم.",
+        "o الشركات الحقيقية عمرها ما هتطلب بيانات حساسة بالإيميل."
+      ],
+      "الكويز": [
+        {
+          "السؤال": "📩 إيميل:\n\"مرحبا، هذا فريق دعم Microsoft. برجاء تحديث حسابك فورًا:\n🔗 http://microsoft-update-secure.com\"",
+          "الإجابة": "Phishing",
+          "explanation": "The email claims to be from Microsoft Support, but the link 'microsoft-update-secure.com' is not an official Microsoft domain and uses HTTP. The urgent call to 'تحديث حسابك فورًا' (update your account immediately) is a common impersonation tactic to pressure users into clicking."
+        },
+        {
+          "السؤال": "📩 SMS:\n\"تم شحن طلبك من DHL. تتبع شحنتك هنا:\n🔗 https://www.dhl.com/track\"",
+          "الإجابة": "Safe",
+          "explanation": "This SMS indicates a shipment from DHL and provides a link to the official DHL tracking page (dhl.com/track) using HTTPS. This is a legitimate shipping notification."
+        },
+        {
+          "السؤال": "📩 إيميل:\n\"نحن من Google HR، تم اختيارك لمقابلة عمل. برجاء ملء بياناتك عبر الملف المرفق (Word).\"",
+          "الإجابة": "Phishing",
+          "explanation": "This email is a phishing attempt. No legitimate company would ask you to fill out sensitive information in an attached Word file. This is a common tactic to deliver malware or collect personal information."
+        },
+        {
+          "السؤال": "📩 إيميل:\n\"هذا إشعار من Apple. تم تسجيل دخول جديد في حسابك، راجع النشاط من هنا:\n🔗 https://appleid.apple.com\"",
+          "الإجابة": "Safe",
+          "explanation": "This email from Apple is a security notification about a new login, directing you to the official Apple ID management page (appleid.apple.com) using HTTPS. This is a legitimate security alert, but always verify the sender's email and URL."
+        },
+        {
+          "السؤال": "📩 SMS:\n\"فريق Vodafone: لتأكيد هويتك أرسل لنا كلمة السر الخاصة بحسابك.\"",
+          "الإجابة": "Phishing",
+          "explanation": "This SMS is attempting to phish for your password under the guise of a security confirmation. No legitimate company will ask for your password via SMS. This is a clear phishing attempt."
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "اسم_الدرس": "التصيد عبر الشبكات الاجتماعية (Social Media Phishing)",
+      "محتوى_الدرس": [
+        "1. إيه هو؟",
+        "o محاولات احتيال بتحصل على فيسبوك، إنستجرام، لينكدإن أو تويتر.",
+        "o المهاجم بيبعتلك رسالة خاصة أو ينشر إعلان مزيف.",
+        "2. أمثلة شائعة:",
+        "o رسالة \"شوف صورتك هنا\" مع رابط مزيف.",
+        "o إعلانات مسابقات وهمية \"اربح آيفون\".",
+        "o طلب صداقة من حساب مزيف يشبه صديقك.",
+        "o رسائل LinkedIn فيها عروض وظيفية كاذبة.",
+        "3. علامات الخطر:",
+        "o حساب بدون صورة أو معلومات حقيقية.",
+        "o روابط مشبوهة أو قصيرة (bit.ly, tinyurl).",
+        "o لغة غريبة أو أخطاء إملائية.",
+        "4. إزاي تحمي نفسك؟",
+        "o ما تضغطش على أي رابط من شخص مجهول.",
+        "o تحقق من الحساب (موثق بعلامة زرقاء؟ عنده متابعين حقيقيين؟).",
+        "o استخدم المصادقة الثنائية (2FA) لحماية حساباتك."
+      ],
+      "الكويز": [
+        {
+          "السؤال": "📩 رسالة على فيسبوك:\n\"يا [اسمك] شوف صورتك اللي اتسربت:\n🔗 http://fb-photo-leak.com\"",
+          "الإجابة": "Phishing",
+          "explanation": "This message uses social engineering to create fear and curiosity by claiming a leaked photo, and directs to a suspicious, non-secure domain ('fb-photo-leak.com'). This is a common social media phishing scam to gain access to your account or personal data."
+        },
+        {
+          "السؤال": "📩 إعلان على إنستجرام من حساب موثق:\n\"خصم 30% على منتجات Adidas الرسمية عبر موقعنا:\n🔗 https://www.adidas.com.eg\"",
+          "الإإجابة": "Safe",
+          "explanation": "An ad from a verified Instagram account (indicated by a blue checkmark) of a reputable brand like Adidas, linking to their official, secure website, is a legitimate marketing promotion."
+        },
+        {
+          "السؤال": "📩 رسالة على LinkedIn:\n\"تم اختيارك لوظيفة في Google، من فضلك ادخل على الرابط وسجّل بياناتك:\n🔗 http://google-careers-eg.net\"",
+          "الإإجابة": "Phishing",
+          "explanation": "This LinkedIn message offers a job at Google but directs to a suspicious, non-secure domain ('google-careers-eg.net'). Official job offers from major companies would link to their actual careers site using HTTPS. This is a fake job offer used for phishing."
+        },
+        {
+          "السؤال": "📩 طلب صداقة على فيسبوك من حساب باسم صديقك، لكن الحساب جديد ومفيهوش غير 3 صور.",
+          "الإجابة": "Phishing",
+          "explanation": "A friend request from a new Facebook account with minimal content, even if it uses a friend's name, is a red flag. It could be an impostor account created by a scammer to gain access to your network or information."
+        },
+        {
+          "السؤال": "📩 رسالة على إنستجرام من صديقك الحقيقي:\n\"إيه رأيك في الصورة دي؟\" مع رابط لموقع إنستجرام الرسمي:\n🔗 https://www.instagram.com/p/XYZ123",
+          "الإجابة": "Safe",
+          "explanation": "This is a normal message from a friend with a link to a legitimate Instagram post. Always ensure the link is genuine, especially if the message seems out of character for your friend."
+        }
+      ]
+    },
+    {
+      "level": 15,
+      "اسم_الدرس": "المواقع المزيفة للبنوك (Banking Phishing)",
+      "محتوى_الدرس": [
+        "1. إيه هو؟",
+        "o مواقع بيقلّدوا شكل البنوك (CIB, QNB, الأهلي) عشان يسرقوا بيانات تسجيل الدخول.",
+        "o المستخدم يفتكر إنه دخل الموقع الرسمي، فيكتب بياناته البنكية.",
+        "2. التكتيك:",
+        "o نفس الألوان والشعار بتاع البنك.",
+        "o روابط قريبة من الأصل لكن فيها اختلاف بسيط (مثال: cibegypt-login.com بدل cibeg.com).",
+        "o رسائل بتقولك \"حسابك هيتقفل لو ما سجلتش فورًا\".",
+        "3. علامات الخطر:",
+        "o الرابط مش هو الدومين الرسمي للبنك.",
+        "o أخطاء إملائية أو تصميم أقل جودة.",
+        "o طلب بيانات حساسة بشكل مباشر (بطاقة، PIN، OTP).",
+        "4. إزاي تحمي نفسك؟",
+        "o ادخل على موقع البنك من نفسك (اكتبه يدويًا أو من التطبيق الرسمي).",
+        "o تأكد من HTTPS والقفل في المتصفح.",
+        "o ولا تشارك بياناتك البنكية أبدًا عبر روابط في SMS أو إيميلات."
+      ],
+      "الكويز": [
+        {
+          "السؤال": "📩 SMS:\n\"عميلنا العزيز، لتأكيد حسابك في CIB ادخل هنا:\n🔗 http://cibegypt-secure-login.com\"",
+          "الإإجابة": "Phishing",
+          "explanation": "The link 'cibegypt-secure-login.com' is a fake domain, and it uses HTTP instead of HTTPS. The urgent request to 'تأكيد حسابك' (confirm your account) is a classic phishing tactic to steal banking credentials."
+        },
+        {
+          "السؤال": "📩 إيميل من QNB:\n\"عزيزي العميل، برجاء تحديث بياناتك عبر موقعنا الرسمي:\n🔗 https://www.qnb.com\"",
+          "الإجابة": "Safe",
+          "explanation": "This email is from QNB and directs to the official QNB website (qnb.com) using HTTPS. While it asks for data updates, it directs to the official site, making it legitimate. Always go directly to the official website if unsure."
+        },
+        {
+          "السؤال": "📩 SMS:\n\"البنك الأهلي المصري: تم تعليق حسابك. فعل الحساب من خلال:\n🔗 http://nbeegypt-verify.net\"",
+          "الإإجابة": "Phishing",
+          "explanation": "The link 'nbeegypt-verify.net' is a fake domain impersonating the National Bank of Egypt, and it uses HTTP. The threatening message ('تم تعليق حسابك') and urgent call to action are clear signs of a phishing attempt to steal bank details."
+        },
+        {
+          "السؤال": "📩 رسالة من تطبيق CIB الرسمي (Notification):\n\"تم سحب مبلغ 500 جنيه من بطاقتك.\"",
+          "الإجابة": "Safe",
+          "explanation": "A notification directly from the official CIB mobile application about a transaction is a legitimate and secure way to receive updates on your account. There are no suspicious links or requests."
+        },
+        {
+          "السؤال": "📩 SMS:\n\"QNB: تم تحويل 2000 جنيه لحسابك بنجاح.\" (بدون روابط).",
+          "الإجابة": "Safe",
+          "explanation": "This SMS confirms a successful transfer to your QNB account without any suspicious links or requests for personal information. This is a legitimate transaction notification."
+        }
+      ]
+    },
+    {
+      "level": 16,
+      "اسم_الدرس": "Fake Wi-Fi Networks (الشبكات اللاسلكية المزيفة)",
+      "محتوى_الدرس": [
+        "1. إيه هو؟",
+        "o شبكة Wi-Fi مجانية مزيفة في كافيه أو مطار أو مول.",
+        "o المهاجم يسميها \"Free_WiFi\" أو \"Airport_WiFi\" ويخليك تتصل بيها.",
+        "2. إيه اللي بيحصل لو اتصلت؟",
+        "o كل اللي بتكتبه (كلمات السر – بيانات البنوك) بيتسجل عند المهاجم.",
+        "o ممكن يوجّهك لمواقع مزيفة تلقائيًا.",
+        "3. علامات الخطر:",
+        "o شبكة مجانية بدون كلمة مرور.",
+        "o نفس اسم المكان لكن بدون تأكيد (مثال: Cafe_Wifi و Cafe_Wifi_Free).",
+        "o بعد الاتصال يطلب منك تدخل بياناتك عشان تكمل.",
+        "4. إزاي تحمي نفسك؟",
+        "o اسأل المكان عن اسم الشبكة الرسمي قبل الاتصال.",
+        "o ما تدخلش بيانات حساسة وإنت على Wi-Fi مجاني.",
+        "o استخدم VPN لحماية اتصالك."
+      ],
+      "الكويز": [
+        {
+          "السؤال": "📶 في مطار القاهرة تلاقي شبكتين:\n• CairoAirport_WiFi (محمية بكلمة مرور معروفة من خدمة العملاء).\n• CairoAirport_Free (مفتوحة بدون كلمة مرور).",
+          "الإجابة": "Phishing",
+          "explanation": "The 'CairoAirport_Free' network is open and unprotected, which is a major security risk. Cybercriminals often set up fake, open Wi-Fi networks to intercept data. The secure network requires a password, as confirmed by customer service."
+        },
+        {
+          "السؤال": "📶 في كافيه، الجرسون يقولك الشبكة الرسمية هي: CafeLatte_WiFi.\nلكن تلاقي شبكة تانية اسمها CafeLatte_Free.",
+          "الإجابة": "Phishing",
+          "explanation": "The 'CafeLatte_Free' network is likely a fake Wi-Fi hotspot set up by an attacker to intercept your data, especially if the official network 'CafeLatte_WiFi' was explicitly identified by staff and is secured."
+        },
+        {
+          "السؤال": "📶 أنت في مول وبتتصل بشبكة مجانية اسمها Mall_WiFi. أول ما تدخل، يطلب منك \"ادخل رقم بطاقتك عشان تكمل الاتصال\".",
+          "الإجابة": "Phishing",
+          "explanation": "A public Wi-Fi network should never ask for sensitive information like your ID number to connect. This is a clear attempt to collect personal data through a fake Wi-Fi portal."
+        },
+        {
+          "السؤال": "📶 شبكة في فندق: Hotel_Guest_WiFi، محمية برقم سري بيديهولك الريسيبشن.",
+          "الإجابة": "Safe",
+          "explanation": "A Wi-Fi network that is protected by a password provided by official staff (reception) is likely a legitimate and more secure network for guests. However, always use a VPN on public networks for extra security."
+        },
+        {
+          "السؤال": "📶 شبكة عامة اسمها: Free_Internet_ForAll، مفتوحة تمامًا وبتشتغل من غير أي تسجيل.",
+          "الإجابة": "Phishing",
+          "explanation": "Any completely open and unrestricted public Wi-Fi network, especially with a generic name like 'Free_Internet_ForAll', is highly suspicious. These are often traps set by attackers to monitor your online activity and steal data."
+        }
+      ]
+    },
+    {
+      "level": 17,
+      "اسم_الدرس": "الهجمات عبر QR Code (رموز الاستجابة السريعة المزيفة)",
+      "محتوى_الدرس": [
+        "1. إيه هو؟",
+        "o رمز QR مزيف بيتحط في أماكن عامة (مطاعم، محطات، إعلانات).",
+        "o لما تمسحه يوديك على موقع تصيد أو ينزّل ملف خبيث.",
+        "2. إزاي بيخدعوك؟",
+        "o لصق QR مزيف فوق الأصلي (في منيو مطعم أو إعلان).",
+        "o QR يفتح صفحة دفع وهمية تشبه البنك.",
+        "o QR يطلب تحميل تطبيق مشبوه.",
+        "3. علامات الخطر:",
+        "o QR في مكان عشوائي مش رسمي.",
+        "o يفتح رابط طويل أو غريب مش تابع للشركة.",
+        "o يطلب بيانات شخصية/مالية غير منطقية.",
+        "4. إزاي تحمي نفسك؟",
+        "o ما تمسحش أي QR إلا من مصدر رسمي وموثوق.",
+        "o استخدم تطبيق يفحص الرابط قبل الفتح.",
+        "o لو QR لعملية دفع، تحقق من الرابط بنفسك قبل إدخال أي بيانات."
+      ],
+      "الكويز": [
+        {
+          "السؤال": "📩 QR موجود على طاولة مطعم، لما مسحته فتح موقع رسمي:\n🔗 https://www.starbucks.com/menu",
+          "الإجابة": "Safe",
+          "explanation": "A QR code in a restaurant that leads to the official menu on the Starbucks website (https://www.starbucks.com/menu) is legitimate. Always verify that the URL is official before proceeding."
+        },
+        {
+          "السؤال": "📩 QR على إعلان في الشارع: \"امسح واربح 1000 جنيه فورًا\". الرابط:\n🔗 http://win-cash-fast.net",
+          "الإجابة": "Phishing",
+          "explanation": "This QR code on a street advertisement promises instant money and leads to a suspicious, non-secure domain ('win-cash-fast.net'). Unrealistic promises and suspicious URLs are hallmarks of a QR code phishing (quishing) scam."
+        },
+        {
+          "السؤال": "📩 QR على منيو ورقي في كافيه. الرابط:\n🔗 http://cafe-menu-eg.com (مش الموقع الرسمي).",
+          "الإجابة": "Phishing",
+          "explanation": "A QR code on a physical menu that directs to a non-official or suspicious domain ('cafe-menu-eg.com') is a red flag. It could be a quishing attack where a fake QR code has been placed over a legitimate one."
+        },
+        {
+          "السؤال": "📩 QR في فاتورة من البنك الأهلي المصري، بيفتح:\n🔗 https://www.nbe.com.eg/payment",
+          "الإجابة": "Safe",
+          "explanation": "A QR code on an official bank statement that leads to the bank's legitimate and secure payment portal (https://www.nbe.com.eg/payment) is safe. However, always double-check the URL to ensure it is the genuine bank website."
+        },
+        {
+          "السؤال": "📩 QR على إعلان في محطة المترو: \"حمّل تطبيق رسمي لمعرفة المواعيد\".\nلكن الرابط:\n🔗 http://metro-app-download.co",
+          "الإإجابة": "Phishing",
+          "explanation": "This QR code on a metro advertisement promises an official app but leads to a suspicious, non-secure domain ('metro-app-download.co'). Official apps should only be downloaded from trusted app stores, not through direct links from QR codes."
+        }
+      ]
+    },
+    {
+      "level": 18,
+      "اسم_الدرس": "التصيد المستهدف (Spear Phishing)",
+      "محتوى_الدرس": [
+        "1. إيه هو؟",
+        "o نوع متطور من التصيد، موجه لشخص أو شركة معينة.",
+        "o المهاجم بيجمع معلومات عنك (اسمك، شركتك، زملاءك) ويستغلها عشان يخليك تثق فيه.",
+        "2. إزاي بيخدعوك؟",
+        "o رسالة من مديرك أو زميلك تطلب منك فتح ملف.",
+        "o إيميل مخصص باسمك (مش رسالة عامة).",
+        "o محتوى مرتبط بعملك أو حياتك فعلاً.",
+        "3. علامات الخطر:",
+        "o إيميل أو رسالة شخصية جدًا بس فيها رابط/مرفق.",
+        "o الطلب مستعجل (\"لازم ترد فورًا\").",
+        "o اللغة شبه رسمية لكن فيها تفاصيل غريبة.",
+        "4. إزاي تحمي نفسك؟",
+        "o تحقق من البريد الإلكتروني للمرسل.",
+        "o اتأكد من الطلب بالكلام أو الاتصال المباشر.",
+        "o لا تفتح أي مرفقات مش متأكد منها."
+      ],
+      "الكويز": [
+        {
+          "السؤال": "📩 إيميل باسمك من \"مديرك\":\n\"أحمد، محتاجك تراجع التقرير فورًا. هتلاقي الملف هنا:\n🔗 http://company-report-secure.net\"",
+          "الإجابة": "Phishing",
+          "explanation": "This is a spear-phishing attempt. The email is personalized and appears to be from your manager, but the link 'company-report-secure.net' is a fake domain and uses HTTP. The urgency to review a 'report immediately' is a tactic to bypass critical thinking."
+        },
+        {
+          "السؤال": "📩 رسالة واتساب من زميلك الحقيقي:\n\"ممكن تبعتلي لينك الاجتماع؟\"",
+          "الإجابة": "Safe",
+          "explanation": "A message from a confirmed colleague asking for a meeting link is a normal work interaction. However, if the request is unusual or urgent, it's always best to verify through an alternative channel."
+        },
+        {
+          "السؤال": "📩 إيميل من HR في شركتك (العنوان مختلف بحرف واحد):\n\"من فضلك حدث بياناتك البنكية قبل نهاية اليوم.\"",
+          "الإإجابة": "Phishing",
+          "explanation": "This is a highly targeted spear-phishing email. The slight misspelling in the HR email address is designed to be overlooked, and the urgent request to 'update bank details' is a direct attempt to steal financial information. Always verify such requests through official channels."
+        },
+        {
+          "السؤال": "📩 إيميل من شركة الكهرباء:\n\"فاتورتك متاحة على الموقع الرسمي:\n🔗 https://www.moee.gov.eg\"",
+          "الإجابة": "Safe",
+          "explanation": "This email from the electricity company provides a link to their official and secure website (moee.gov.eg). This is a legitimate notification for bill availability."
+        },
+        {
+          "السؤال": "📩 رسالة SMS:\n\"أحمد، تم تسجيلك في مؤتمر الذكاء الاصطناعي. التفاصيل في الملف المرفق (Word).\"",
+          "الإجابة": "Phishing",
+          "explanation": "This SMS is suspicious as it mentions an attachment (Word file) for conference details, which is a common tactic to deliver malware or collect personal information. Be cautious with such messages."
+        }
+      ]
+    },
+    {
+      "level": 19,
+      "اسم_الدرس": "التصيد عبر Deepfake / AI",
+      "محتوى_الدرس": [
+        "1. إيه هو؟",
+        "o استخدام تقنيات الذكاء الاصطناعي (AI) لتزوير أصوات أو فيديوهات لأشخاص معروفين (مديرك، صديقك، أو حتى شخصية مشهورة).",
+        "o الهدف: يخلوك تثق وتنفذ طلبهم (تحويل فلوس – مشاركة بيانات).",
+        "2. أمثلة شائعة:",
+        "o مكالمة صوتية بنفس صوت مديرك يطلب منك \"تحويل مبلغ عاجل\".",
+        "o فيديو مزيف لشخصية معروفة تعلن عن استثمار مربح.",
+        "o رسالة صوتية من صديقك تطلب مساعدة مالية.",
+        "3. علامات الخطر:",
+        "o طلبات مالية أو حساسة بشكل مفاجئ.",
+        "o محتوى الصوت/الفيديو فيه تفاصيل ناقصة أو أخطاء.",
+        "o الشخص يرفض التواصل بطرق رسمية (إيميل الشركة أو الاجتماع).",
+        "4. إزاي تحمي نفسك؟",
+        "o تحقق من أي طلب عبر وسيلة تانية (اتصل بالشخص مباشرة).",
+        "o لا تنفذ أوامر مالية بناءً على مكالمة أو فيديو مش مؤكد.",
+        "o الشركات لازم تعتمد سياسة \"تحقق مزدوج\" قبل أي عملية حساسة."
+      ],
+      "الكويز": [
+        {
+          "السؤال": "📩 مكالمة صوتية بنفس صوت مديرك:\n\"أحمد، حوّل 50,000 جنيه فورًا لحساب المورد ده.\"",
+          "الإجابة": "Phishing",
+          "explanation": "This is a deepfake/AI voice scam. The attacker uses AI to mimic your manager's voice, creating urgency ('فورًا') for a large financial transfer. Always verify such requests through a different, confirmed communication channel, like a video call or an official email."
+        },
+        {
+          "السؤال": "📩 فيديو رسمي من صفحة موثقة للبنك الأهلي المصري يشرح خدمة جديدة.",
+          "الإجابة": "Safe",
+          "explanation": "A video from an official, verified page of a legitimate bank (National Bank of Egypt) explaining a new service is safe. Official channels are used for genuine communications."
+        },
+        {
+          "السؤال": "📩 رسالة واتساب صوتية من صديقك تطلب \"ابعتلي كود الـ OTP اللي وصلك بالغلط\".",
+          "الإجابة": "Phishing",
+          "explanation": "This is a deepfake/AI voice scam attempting to trick you into giving up an OTP. Your friend would never ask for an OTP, especially not claiming it was 'sent by mistake'. Always verify sensitive requests via a different channel."
+        },
+        {
+          "السؤال": "📩 إعلان على يوتيوب من قناة غير موثقة بيعرض فيديو لشخصية مشهورة:\n\"استثمر في هذا المشروع، أنا ربحت 10 أضعاف.\"",
+          "الإجابة": "Phishing",
+          "explanation": "An ad from an unverified YouTube channel featuring a celebrity promoting an unrealistic investment scheme is likely a deepfake/AI-generated scam. Celebrities are often impersonated to lend credibility to fraudulent schemes. Always verify investment opportunities through official, reputable financial advisors."
+        },
+        {
+          "السؤال": "📩 مكالمة هاتفية من البنك عبر رقم الخط الساخن الرسمي 19623 للتحقق من معاملة.",
+          "الإجابة": "Safe",
+          "explanation": "A phone call from the bank's official, published hotline number (19623) to verify a transaction is a legitimate security measure. However, be cautious if you receive an unsolicited call and are asked for sensitive information; it's always best to call them back on a verified number."
+        }
+      ]
+    },
+    {
+      "level": 20,
+      "اسم_الدرس": "محاكاة سيناريوهات حقيقية شاملة (Final Test)",
+      "محتوى_الدرس": [
+        "• ده امتحان شامل فيه خليط من كل اللي اتعلمته من المستوى 1 لحد 19.",
+        "• الأسئلة عبارة عن مواقف حقيقية من:",
+        "o روابط",
+        "o إيميلات",
+        "o SMS",
+        "o شبكات Wi-Fi",
+        "o QR Codes",
+        "o أصوات/فيديوهات مزيفة",
+        "• مطلوب منك تميّز: Safe أو Phishing."
+      ],
+      "الكويز_النهائي": [
+        {
+          "السؤال": "📩 SMS:\n\"عزيزي العميل، برجاء تحديث بياناتك فورًا لتجنب إيقاف الخدمة:\n🔗 http://nbeegypt-login-secure.com\"",
+          "الإجابة": "Phishing",
+          "explanation": "The link 'nbeegypt-login-secure.com' is a fake domain, and the use of 'http' makes it insecure. The urgent and threatening language ('لتجنب إيقاف الخدمة') is a common phishing tactic. Always verify directly with the bank."
+        },
+        {
+          "السؤال": "📩 إعلان على إنستجرام من حساب موثق:\n\"خصم 40% على منتجات Adidas الرسمية عبر موقعنا:\n🔗 https://www.adidas.com.eg\"",
+          "الإإجابة": "Safe",
+          "explanation": "This is a legitimate advertisement from a verified Adidas account, linking to their official, secure Egyptian website. Official promotions from verified sources are generally safe."
+        },
+        {
+          "السؤال": "📶 شبكة Wi-Fi في مطار دبي:\n• DubaiAirport_WiFi (محمية بكلمة مرور معلنة في اللوحات الرسمية).\n• Free_DubaiAirport (مفتوحة بدون أي حماية).",
+          "الإجابة": "Phishing",
+          "explanation": "The 'Free_DubaiAirport' network is an open, unsecured Wi-Fi network, which is often a trap. Always connect to official, password-protected networks from trusted sources, like the one with a password announced on official boards."
+        },
+        {
+          "السؤال": "📩 إيميل من \"Microsoft Support\":\n\"برجاء تثبيت هذا التحديث الأمني فورًا عبر الملف المرفق (Word).\"",
+          "الإجابة": "Phishing",
+          "explanation": "This email is a phishing attempt. No legitimate company would ask you to install a security update via an attached Word file. This is a common tactic to deliver malware or collect personal information."
+        },
+        {
+          "السؤال": "📩 QR على منيو مطعم، بيفتح موقع رسمي:\n🔗 https://www.starbucks.com/menu",
+          "الإإجابة": "Safe",
+          "explanation": "A QR code on a restaurant menu that directs to the official and secure website of Starbucks is legitimate. Always double-check the URL after scanning."
+        },
+        {
+          "السؤال": "📩 مكالمة صوتية بنفس صوت مديرك:\n\"أحمد، حوّل مبلغ 20,000 جنيه فورًا للمورد، ده أمر عاجل.\"",
+          "الإجابة": "Phishing",
+          "explanation": "This is a deepfake voice scam. The urgent request for a large financial transfer, even if the voice sounds like your manager, needs to be verified through a separate, trusted communication method (e.g., a direct call to their known number, not a callback to the same number)."
+        },
+        {
+          "السؤال": "📩 رسالة واتساب من صديقك:\n\"ممكن تبعتلي لينك اجتماع الزووم بكرة؟\"",
+          "الإجابة": "Safe",
+          "explanation": "A message from a known friend asking for a meeting link is a normal social interaction. However, if the message seems out of character or requests sensitive information, always verify with your friend through another channel."
+        },
+        {
+          "السؤال": "📩 إيميل من Google Careers (العنوان: hr@google-careers.com):\n\"مبروك! تم اختيارك لمقابلة عمل. سجل بياناتك هنا:\n🔗 http://google-careers-eg.net\"",
+          "الإإجابة": "Phishing",
+          "explanation": "The email claims to be from Google Careers, but the sender's domain 'google-careers.com' is not official, and the link 'google-careers-eg.net' is also fake and uses HTTP. This is a fake job offer designed to phish for personal information."
+        },
+        {
+          "السؤال": "📩 إشعار رسمي من تطبيق البنك الأهلي المصري:\n\"تم سحب مبلغ 1000 جنيه من بطاقتك.\"",
+          "الإجابة": "Safe",
+          "explanation": "A notification directly from the official mobile banking app is a legitimate way to receive transaction alerts. There are no suspicious elements here."
+        },
+        {
+          "السؤال": "📩 إعلان على يوتيوب من قناة غير موثقة:\n\"استثمر في العملة الجديدة دلوقتي، أنا ربحت 5 أضعاف.\"",
+          "الإجابة": "Phishing",
+          "explanation": "إعلان من قناة يوتيوب غير موثقة، يظهر فيه أحد المشاهير، ويروج لمخطط استثماري غير واقعي، يُرجّح أنه عملية احتيال مُولّدة بتقنية التزييف العميق/الذكاء الاصطناعي. غالبًا ما يُنتحل المشاهير لإضفاء مصداقية على المخططات الاحتيالية. تأكد دائمًا من فرص الاستثمار من خلال مستشارين ماليين رسميين ذوي سمعة طيبة."
+        }
+      ]
+    }
+  ]
 }

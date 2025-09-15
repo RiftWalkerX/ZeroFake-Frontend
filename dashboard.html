@@ -6,32 +6,56 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body dir="rtl">
     <header class="header">
-        <div class="logo">Zero Fake</div>
-        <nav class="navbar">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="training.html" class="nav-link">Training</a>
-            <a href="leaderboard.html" class="nav-link">Leaderboard</a>
-            <a href="profile.html" class="nav-link">Profile</a>
-            <a href="auth.html" class="nav-link">Login/Signup</a>
-            <a href="#" id="logoutBtn" class="nav-link">Logout</a>
-        </nav>
-        <div class="theme-switch">
-            <input type="checkbox" id="darkModeToggle" class="theme-checkbox">
-            <label for="darkModeToggle" class="theme-label"></label>
+        <div id="profileIconAndToggleContainer" style="display: flex; align-items: center;">
+            <div class="profile-icon" id="profileIcon">
+                <a href="profile.html">👤</a>
+            </div>
+            <div class="theme-switch">
+                <input type="checkbox" id="themeToggle" class="theme-checkbox">
+                <label for="themeToggle" class="theme-label"></label>
+            </div>
         </div>
+        <nav class="navbar">
+            <a href="index.html" class="nav-link">الرئيسية</a>
+            <a href="training.html" class="nav-link">التدريب</a>
+            <a href="leaderboard.html" class="nav-link">لوحة الصدارة</a>
+            <a href="profile.html" class="nav-link">الملف الشخصي</a>
+            <a href="auth.html" class="nav-link">تسجيل الدخول</a>
+            <a href="#" id="logoutBtn" class="nav-link">خروج</a>
+        </nav>
+        <div class="logo">Zero Fake</div>
     </header>
 
     <div class="container dashboard-container" style="margin-top: 100px;">
         <h1>Dashboard</h1>
-        <p>Welcome, User!</p>
+        <p data-key="welcome_user">Welcome, User!</p>
         <div class="progress-section">
-            <h2>Your Progress</h2>
-            <p>Quizzes Played: <span id="quizzesPlayed">0</span></p>
-            <p>Times Corrected: <span id="timesCorrected">0</span></p>
+            <h2 data-key="your_progress">Your Progress</h2>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="dashboardProgressBarFill"></div>
+            </div>
+            <p><span data-key="profile_lessons_completed">Lessons Completed:</span> <span id="dashboardLessonsCompleted">0</span></p>
+            <p><span data-key="quizzes_played">Quizzes Played:</span> <span id="quizzesPlayed">0</span></p>
+            <p><span data-key="times_correct">Times Corrected:</span> <span id="timesCorrected">0</span></p>
         </div>
     </div>
     <script src="app.js"></script>
+    <div class="chatbot-icon" id="chatbotToggle">
+        💬
+    </div>
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <h3 data-key="bot_name">Zero Fake Bot</h3>
+            <span class="close-btn" id="closeChat">&times;</span>
+        </div>
+        <div class="chat-msgs" id="chatMessages">
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Ask me anything...">
+            <button id="sendChatBtn" class="btn">Send</button>
+        </div>
+    </div>
 </body>
 </html>

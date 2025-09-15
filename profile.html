@@ -6,36 +6,57 @@
     <title>Profile</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body dir="rtl">
     <header class="header">
-        <div class="logo">Zero Fake</div>
-        <nav class="navbar">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="training.html" class="nav-link">Training</a>
-            <a href="leaderboard.html" class="nav-link">Leaderboard</a>
-            <a href="profile.html" class="nav-link">Profile</a>
-            <a href="auth.html" class="nav-link">Login/Signup</a>
-            <a href="#" id="logoutBtn" class="nav-link">Logout</a>
-        </nav>
-        <div class="theme-switch">
-            <input type="checkbox" id="darkModeToggle" class="theme-checkbox">
-            <label for="darkModeToggle" class="theme-label"></label>
+        <div id="profileIconAndToggleContainer">
+            <div class="profile-icon" id="profileIcon">
+                <a href="profile.html">👤</a>
+            </div>
+            <div class="theme-switch">
+                <input type="checkbox" id="themeToggle" class="theme-checkbox">
+                <label for="themeToggle" class="theme-label"></label>
+            </div>
         </div>
+        <nav class="navbar">
+            <a href="index.html" class="nav-link">الرئيسية</a>
+            <a href="training.html" class="nav-link">التدريب</a>
+            <a href="leaderboard.html" class="nav-link">لوحة الصدارة</a>
+            <a href="cyber_challenge.html" class="nav-link">تحدي الأمن السيبراني</a>
+            <a href="auth.html" class="nav-link">تسجيل الدخول</a>
+        </nav>
+        <div class="logo">Zero Fake</div>
     </header>
 
     <div class="container profile-container" style="margin-top: 100px;">
-        <h1>Profile Page</h1>
+        <h1>الملف الشخصي</h1>
         <div class="user-info">
-            <p>Username: <span id="profileUsername">Guest</span></p>
-            <p>Total Quizzes: <span id="profileTotalQuizzes">0</span></p>
-            <p>Correct Answers: <span id="profileCorrectAnswers">0</span></p>
-            <p>Lessons Completed: <span id="profileLessonsCompleted">0</span></p>
+            <p><span>اسم المستخدم:</span> <span id="profileUsername">Guest</span></p>
+            <p><span>الاختبارات المكتملة:</span> <span id="profileTotalQuizzes">0</span></p>
+            <p><span>الإجابات الصحيحة:</span> <span id="profileCorrectAnswers">0</span></p>
+            <p><span>الدروس المكتملة:</span> <span id="profileLessonsCompleted">0</span></p>
         </div>
+        <button id="logoutBtn" class="btn logout-btn" style="margin-top: 20px;">خروج</button>
 
-        <h2>Achievements / Badges</h2>
+        <h2>الإنجازات / الشارات</h2>
         <div class="badges-container" id="badgesContainer">
+            <p>اكمل الدروس والاختبارات لكسب الشارات!</p>
         </div>
     </div>
     <script src="app.js"></script>
+    <div class="chatbot-icon" id="chatbotToggle">
+        💬
+    </div>
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <h3 data-key="bot_name">Zero Fake Bot</h3>
+            <span class="close-btn" id="closeChat">&times;</span>
+        </div>
+        <div class="chat-msgs" id="chatMessages">
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Ask me anything...">
+            <button id="sendChatBtn" class="btn">Send</button>
+        </div>
+    </div>
 </body>
 </html>
